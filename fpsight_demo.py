@@ -1,17 +1,6 @@
 #!/usr/bin/env python3
 """
 FPSight baseline demo
-
-What it does:
-1. Reads an FPS gameplay video.
-2. Runs a generic YOLO detector and keeps person detections.
-3. Assumes the crosshair is at the screen center (a simple baseline).
-4. Measures distance from crosshair to the nearest detected target.
-5. Estimates a simple reaction time:
-   - target becomes visible
-   - first later frame where crosshair enters that target's box
-6. Writes an annotated video + CSV metrics.
-
 """
 
 import argparse
