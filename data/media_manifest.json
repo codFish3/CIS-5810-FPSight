@@ -1,0 +1,20 @@
+{
+  "note": "Presentation masks cover baked-in localized HUD text. Original experimental outputs were not recomputed.",
+  "files": {
+    "data/source.mp4": {
+      "sha256": "a476a7f8f856d9132023ca291cc74c1709b927972247949b0835f923e0fcdbef",
+      "frames": 721,
+      "fps": 30.0
+    },
+    "data/sample/annotated.mp4": {
+      "sha256": "4347b688b74d67c905df5e94cca64b23ee718034b5f72171c6016f42da13504e",
+      "frames": 240,
+      "fps": 10.0
+    },
+    "data/sample/recording.mp4": {
+      "sha256": "a76a27178c621fe3d8eaa27df7a4a8f02c5b444e5595b0dbab50f6a77ffff196",
+      "frames": 720,
+      "fps": 30.0
+    }
+  }
+}

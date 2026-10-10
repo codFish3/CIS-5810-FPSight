@@ -1,37 +1,48 @@
-# FPSight — Baseline Demo
+# FPSight
 
-A demo for the CIS 5810 final-project.
-
-## What this demo shows
-
-The demo processes recorded FPS gameplay and:
-
-- detects `person` instances using a generic YOLO model;
-- treats the screen center as the player's crosshair position;
-- measures crosshair-to-target distance;
-- checks whether the crosshair lies inside a detected target box;
-- estimates a simple reaction time from target appearance to crosshair overlap;
-- exports an annotated video and per-frame CSV metrics.
+A local computer vision prototype for reviewing CS2 gameplay recordings.
 
 ## Run
 
-Put a short CS2 / Valorant / other FPS recording in this folder, for example:
+Use Python 3.10 or 3.11. From the project folder:
 
-`gameplay.mp4`
-
-Then run:
-
-```bash
-python fpsight_demo.py gameplay.mp4
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python server.py
 ```
 
-For a faster sharing-session demo:
+On Windows, activate the environment with `.venv\Scripts\Activate.ps1`.
 
-```bash
-python fpsight_demo.py gameplay.mp4 --max-seconds 15
+Open **http://127.0.0.1:5810**. On macOS, after setup, you can also double-click `start.command`. Keep the terminal open; press `Ctrl+C` to stop.
+
+Video analysis requires the bundled `models/yolo11n.pt`. If exported videos do not play in your browser, install the optional H.264 encoder:
+
+```sh
+python -m pip install imageio-ffmpeg
 ```
 
-Outputs:
+## Core Features
 
-- `fpsight_output.mp4`
-- `fpsight_metrics.csv`
+- Import recorded gameplay and analyze it locally.
+- Detect character candidates, associate target IDs, and locate the crosshair.
+- Review detection overlays, aim-distance curves, and target acquisition events.
+- Compare baseline and improved detection views; export CSV, JSON, and annotated video.
+
+## Baseline: Original FPSight_demo
+
+The original `FPSight_demo/fpsight_demo.py` is a command-line script using pretrained YOLO11n COCO `person` detection on full frames. It assumes a screen-center crosshair, measures distance to the nearest box center, and uses one global acquisition timer that resets when no characters are detected. It exports an annotated video and frame-level CSV.
+
+## Iteration 1: Changes from the Demo
+
+| Area | Original demo | Current version |
+| --- | --- | --- |
+| Detection | Full-frame person detection | Gameplay-region crop and geometry filters for HUD/weapon candidates |
+| Crosshair | Fixed screen center | Green HSV localization with an explicit center fallback |
+| Target identity | Nearest target per frame; no persistent IDs | Lightweight IoU/distance association and confirmation after 3 consecutive samples |
+| Acquisition | One global timer | Per-target episodes; missing observations end episodes, initially aligned cases are separate, and unavailable delays remain null |
+| Aim reference | Box center | Geometric anchor 15% down the box |
+| Review | Annotated video and CSV | Local web replay, event seeking, synchronized distance curves, and baseline overlays |
+| Experiment outputs | Frame-level CSV | Frame/event CSV, analysis JSON, saved configuration, and baseline/iteration comparison |
+| Structure | Single script | Separate analyzer, CLI, local server, interface, and rule tests |

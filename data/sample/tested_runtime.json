@@ -1,0 +1,11 @@
+{
+  "python": "3.9.6",
+  "system": "Darwin",
+  "architecture": "arm64",
+  "packages": {
+    "ultralytics": "8.4.168",
+    "opencv-python": "4.11.0.86",
+    "torch": "2.8.0",
+    "numpy": "1.26.4"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "protocol": "Same local YOLO weights, confidence threshold, imgsz and sample timestamps. Baseline: full frame / fixed screen-center crosshair / nearest bbox center / no identity. Improved: local HSV crosshair (or configured center), optional gameplay crop + geometry filters + temporal confirmation; fixed upper-bbox anchor. Crosshair and geometry anchors differ, so mean errors are descriptive and cannot establish accuracy gains.",
+  "model_filename": "yolo11n.pt",
+  "ground_truth_available": false,
+  "config": {
+    "conf": 0.12,
+    "sample_fps": 10.0,
+    "imgsz": 1280,
+    "hud": true,
+    "tracking": true
+  },
+  "sampled_frames": 240,
+  "baseline": {
+    "total_detections": 165,
+    "detected_frames": 101,
+    "coverage_pct": 42.08,
+    "mean_error_px": 321.34,
+    "alignment_pct": 5.94,
+    "naive_latency_events": 4,
+    "naive_latency_median_ms": 0.0,
+    "naive_zero_latency_events": 3
+  },
+  "improved": {
+    "raw_roi_detections": 138,
+    "total_detections": 61,
+    "geometry_rejections": 77,
+    "detected_frames": 49,
+    "confirmed_frames": 16,
+    "coverage_pct": 20.42,
+    "confirmed_tracks": 6,
+    "mean_error_px": 118.54,
+    "alignment_pct": 6.25,
+    "acquisition_events": 1,
+    "median_acquisition_ms": 100.0,
+    "already_aligned_encounters": 1
+  },
+  "interpretation": "Counts and proxy distributions only. No precision, recall, mAP, hit accuracy or human reaction-time claim without annotated ground truth.",
+  "source_sha256": "a741d01c91b35816f80f1642649ff66d8b32ce9794fe4289dda29508ca2ba12b"
+}

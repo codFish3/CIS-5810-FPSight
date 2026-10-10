@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FPSight · CS2 Vision Analysis</title>
+    <link rel="stylesheet" href="/web/style.css" />
+    <script src="/web/app.js" defer></script>
+  </head>
+  <body>
+    <svg class="sprite" aria-hidden="true">
+      <defs>
+        <symbol id="cross" viewBox="0 0 24 24">
+          <path d="M12 2v5m0 10v5M2 12h5m10 0h5" />
+          <circle cx="12" cy="12" r="6" />
+          <circle cx="12" cy="12" r="1" />
+        </symbol>
+        <symbol id="grid" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="7" height="7" rx="1" />
+          <rect x="14" y="3" width="7" height="7" rx="1" />
+          <rect x="3" y="14" width="7" height="7" rx="1" />
+          <rect x="14" y="14" width="7" height="7" rx="1" />
+        </symbol>
+        <symbol id="flask" viewBox="0 0 24 24">
+          <path d="M9 3h6m-5 0v6L4 19q-1 2 2 2h12q3 0 2-2L14 9V3M7 15h10" />
+        </symbol>
+        <symbol id="layers" viewBox="0 0 24 24">
+          <path d="m12 3 10 5-10 5L2 8Zm-9 9 9 5 9-5M3 16l9 5 9-5" />
+        </symbol>
+        <symbol id="upload" viewBox="0 0 24 24">
+          <path d="M12 16V3m-5 5 5-5 5 5M4 16v5h16v-5" />
+        </symbol>
+        <symbol id="down" viewBox="0 0 24 24">
+          <path d="M12 3v13m-5-5 5 5 5-5M4 16v5h16v-5" />
+        </symbol>
+        <symbol id="play" viewBox="0 0 24 24">
+          <path d="m7 4 13 8-13 8Z" />
+        </symbol>
+        <symbol id="chevron" viewBox="0 0 24 24">
+          <path d="m9 5 7 7-7 7" />
+        </symbol>
+        <symbol id="clock" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 6v6l4 2" />
+        </symbol>
+        <symbol id="settings" viewBox="0 0 24 24">
+          <path d="M3 6h18M3 12h18M3 18h18" />
+          <circle cx="8" cy="6" r="2" />
+          <circle cx="16" cy="12" r="2" />
+          <circle cx="8" cy="18" r="2" />
+        </symbol>
+      </defs>
+    </svg>
+    <aside class="sidebar">
+      <a class="brand" href="/"
+        ><span class="brandmark"
+          ><svg><use href="#cross" /></svg></span
+        ><b>FPSight<span>VISION LAB</span></b></a
+      >
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav aria-label="Main navigation">
+        <button class="nav-item active" data-page="review">
+          <svg><use href="#grid" /></svg>Video Review<span>01</span></button
+        ><button class="nav-item" data-page="experiments">
+          <svg><use href="#flask" /></svg>Experiments<span>02</span></button
+        ><button class="nav-item" data-page="method">
+          <svg><use href="#layers" /></svg>Method<span>03</span>
+        </button>
+      </nav>
+      <div class="sidebar-label space">CURRENT SESSION</div>
+      <button id="sampleButton" class="session">
+        <span class="session-dot"></span
+        ><span
+          ><b>Twistzz · CS2</b
+          ><small>Recorded gameplay / analyzed sample</small></span
+        ><svg><use href="#chevron" /></svg>
+      </button>
+      <div class="sidebar-bottom">
+        <div class="local-status"><i></i> Local video analysis</div>
+        <p>CIS 5810 · FALL 2026<br />Computer Vision Final Project</p>
+        <span class="version">PROTOTYPE v0.2</span>
+      </div>
+    </aside>
+    <main>
+      <header>
+        <div class="breadcrumb">
+          WORKSPACE <span>/</span> <b id="crumb">Video Review</b>
+        </div>
+        <div class="header-right">
+          <span class="tag"><i></i> CS2</span
+          ><span class="local-tag">LOCAL SESSION</span>
+        </div>
+      </header>
+      <section class="page-heading">
+        <div>
+          <div class="eyebrow">COMPUTER VISION × COUNTER-STRIKE 2</div>
+          <h1 id="pageTitle">Understand every aiming decision<span>.</span></h1>
+          <p id="pageSubtitle">
+            From gameplay video to target tracking, make aiming observable and
+            reviewable.
+          </p>
+        </div>
+        <button id="uploadButton" class="primary">
+          <svg><use href="#upload" /></svg>Import Video
+        </button>
+      </section>
+      <section id="reviewPage" class="page">
+        <div class="session-bar">
+          <div>
+            <span class="file-icon">MP4</span
+            ><b id="sessionName">Twistzz · CS2 gameplay</b
+            ><span class="meta" id="sessionMeta"
+              >Reading analysis results...</span
+            >
+          </div>
+          <div>
+            <span class="complete" id="analysisState">Loading</span
+            ><button
+              class="icon-button"
+              id="settingsButton"
+              aria-label="Analysis settings"
+            >
+              <svg><use href="#settings" /></svg>
+            </button>
+          </div>
+        </div>
+        <div class="stats-scope">
+          Improved version · Recording summary
+          <span
+            >Baseline changes the detection overlay; summary metrics remain for
+            the improved version.</span
+          >
+        </div>
+        <div class="metrics">
+          <article class="metric">
+            <div>
+              Mean Aim Distance <svg><use href="#cross" /></svg>
+            </div>
+            <strong id="meanError">—</strong>
+            <p>Crosshair to upper-box reference point</p>
+            <span class="metric-line orange"></span>
+          </article>
+          <article class="metric">
+            <div>
+              Crosshair Alignment <svg><use href="#grid" /></svg>
+            </div>
+            <strong id="alignment">—</strong>
+            <p>Sampled frames with confirmed targets only</p>
+            <span class="metric-line green"></span>
+          </article>
+          <article class="metric">
+            <div>
+              Median Acquisition Proxy <svg><use href="#clock" /></svg>
+            </div>
+            <strong id="latency">—</strong>
+            <p id="latencyNote">Observable acquisition proxy</p>
+            <span class="metric-line purple"></span>
+          </article>
+          <article class="metric">
+            <div>
+              Confirmed Tracks <svg><use href="#layers" /></svg>
+            </div>
+            <strong id="trackCount">—</strong>
+            <p id="coverage">At least 3 consecutive sampled observations</p>
+            <span class="metric-line blue"></span>
+          </article>
+        </div>
+        <div class="analysis-grid">
+          <section class="panel replay-panel">
+            <div class="panel-heading">
+              <h2><i class="orange-dot"></i>Video Replay<span>REPLAY</span></h2>
+              <div class="segmented" aria-label="Detection version">
+                <button class="active" id="improvedButton">Improved</button
+                ><button id="baselineButton">Baseline</button>
+              </div>
+            </div>
+            <div class="video-stage" id="videoStage">
+              <video
+                id="video"
+                playsinline
+                muted
+                preload="auto"
+                aria-label="CS2 gameplay video"
+              ></video
+              ><canvas id="overlay"></canvas
+              ><span class="video-badge" id="frameBadge"
+                >YOLO11n + TRACKING</span
+              ><span class="frame-time" id="frameTime">00:00.00</span>
+              <div class="video-loading" id="videoLoading">
+                Loading CS2 recording...
+              </div>
+            </div>
+            <div class="playback">
+              <button
+                id="playButton"
+                class="icon-button"
+                aria-label="Play video"
+              >
+                <svg><use href="#play" /></svg></button
+              ><span id="currentTime">00:00</span
+              ><input
+                id="seek"
+                type="range"
+                min="0"
+                max="24"
+                step="0.01"
+                value="0"
+                aria-label="Video progress"
+              /><span id="duration">00:24</span
+              ><select id="speed" aria-label="Playback speed">
+                <option value="0.5">0.5×</option>
+                <option value="1" selected>1×</option>
+                <option value="1.5">1.5×</option>
+                <option value="2">2×</option>
+              </select>
+            </div>
+            <div class="overlay-options">
+              <label
+                ><input type="checkbox" id="showBoxes" checked />Target boxes
+                and IDs</label
+              ><label
+                ><input type="checkbox" id="showAim" checked />Crosshair and
+                distance</label
+              ><label
+                ><input type="checkbox" id="showRoi" />Detection region</label
+              ><span
+                ><i class="legend green"></i> Confirmed
+                <i class="legend orange"></i> Candidate</span
+              >
+            </div>
+          </section>
+          <aside class="panel insights">
+            <div class="panel-heading">
+              <h2>Frame Insights<span>LIVE INSIGHTS</span></h2>
+              <span class="live-indicator"></span>
+            </div>
+            <div class="live-target">
+              <div class="small-label">Current target</div>
+              <strong id="liveTarget">—</strong
+              ><span id="targetStatus" class="target-status"
+                >Waiting for sampled frame</span
+              >
+            </div>
+            <dl class="frame-details">
+              <div>
+                <dt>Detection confidence</dt>
+                <dd id="liveConfidence">—</dd>
+              </div>
+              <div>
+                <dt>Aim distance</dt>
+                <dd id="liveError">—</dd>
+              </div>
+              <div>
+                <dt>Crosshair location</dt>
+                <dd id="liveCrosshair">—</dd>
+              </div>
+              <div>
+                <dt>Observed targets</dt>
+                <dd id="liveCount">—</dd>
+              </div>
+            </dl>
+            <div class="divider"></div>
+            <div class="events-heading">
+              <h3>Target events</h3>
+              <span id="eventCount">0 EVENTS</span>
+            </div>
+            <div id="encounterList" class="encounters"></div>
+            <p class="event-footnote">
+              Select an event to seek · Gaps restart timing
+            </p>
+          </aside>
+        </div>
+        <section class="panel chart-panel">
+          <div class="panel-heading">
+            <h2>Aim Distance Over Time<span>AIM ERROR / PX</span></h2>
+            <div class="chart-legend">
+              <span><i class="legend orange"></i>Improved</span
+              ><span><i class="legend muted"></i>Baseline</span>
+            </div>
+          </div>
+          <div
+            id="chart"
+            class="chart"
+            role="button"
+            tabindex="0"
+            aria-label="Select the distance chart to seek"
+          ></div>
+          <p class="chart-note">
+            Each curve measures its own detected targets; gaps indicate missing
+            measurements. Baseline uses box centers, while Improved uses
+            upper-box anchors. Lower distances do not establish higher accuracy.
+          </p>
+        </section>
+        <div class="bottom-grid">
+          <section class="panel feedback-panel">
+            <div class="panel-heading">
+              <h2>Review Observations<span>OBSERVATIONS</span></h2>
+              <svg class="icon"><use href="#cross" /></svg>
+            </div>
+            <div id="feedback"></div>
+          </section>
+          <section class="panel export-panel">
+            <div class="panel-heading">
+              <h2>Export Your Analysis<span>EXPORT</span></h2>
+            </div>
+            <p>
+              Save frame measurements and target events for reproducible
+              experiments and presentations.
+            </p>
+            <div class="export-links">
+              <a id="csvDownload" download
+                ><svg><use href="#down" /></svg>Frame CSV</a
+              ><a id="jsonDownload" download>Analysis JSON ↗</a
+              ><a id="videoDownload" download>Annotated Video ↗</a>
+            </div>
+            <span class="export-footnote">All analysis runs locally</span>
+          </section>
+        </div>
+        <div class="notice">
+          <span>i</span>
+          <p>
+            This is a video analysis prototype. Generic detections are character
+            candidates, without team classification. Spectator x-ray outlines do
+            not establish player visibility. Alignment is not hit accuracy, and
+            acquisition delay is not shooting reaction time.
+          </p>
+        </div>
+      </section>
+      <section id="experimentsPage" class="page" hidden>
+        <div class="experiment-intro">
+          <span class="pill">ITERATION 01</span>
+          <h2>One recording. One measured iteration.</h2>
+          <p>
+            Compare full-frame detection with gameplay-region detection,
+            crosshair localization, and temporal tracking using the same model
+            and sampling settings. Values below come from the recorded run.
+          </p>
+        </div>
+        <div class="experiment-columns">
+          <article class="panel method-card">
+            <span class="step-number">01 / BASELINE</span>
+            <h2>Frame-by-frame full-view detection</h2>
+            <p>
+              YOLO person class → screen-center crosshair → nearest target. No
+              persistent identity or observation continuity requirement.
+            </p>
+            <div id="baselineStats"></div>
+          </article>
+          <article class="panel method-card improved">
+            <span class="step-number">02 / ITERATION</span>
+            <h2>Gameplay Region + Temporal Tracking</h2>
+            <p>
+              Crop the HUD and filter weapon candidates. Locate the green
+              crosshair with HSV, confirm consecutive observations, and record
+              events per track.
+            </p>
+            <div id="improvedStats"></div>
+          </article>
+        </div>
+        <section class="panel experiment-result">
+          <h2>Interpreting the Results</h2>
+          <div id="experimentDetails"></div>
+          <p>
+            No manually annotated test set is available. Counts and coverage
+            describe system behavior, not accuracy gains. Next, annotate
+            character boxes, player visibility, team identity, and event times.
+          </p>
+          <a id="experimentDownload" download>Download experiment.json ↗</a>
+        </section>
+      </section>
+      <section id="methodPage" class="page" hidden>
+        <div class="pipeline">
+          <article>
+            <span>01</span>
+            <h3>Video Input</h3>
+            <p>
+              MP4 / MOV / MKV / AVI<br />Local processing and temporal sampling
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Character Detection</h3>
+            <p>
+              YOLO11n person candidates<br />Gameplay crop and geometry filters
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Temporal Tracking</h3>
+            <p>
+              IoU and distance association<br />Consecutive confirmation and
+              persistent IDs
+            </p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Measurement and Review</h3>
+            <p>
+              Aim distance / alignment / delay<br />Synchronized replay and CSV
+              export
+            </p>
+          </article>
+        </div>
+        <section class="panel definitions">
+          <h2>Metric Definitions and Limitations</h2>
+          <dl>
+            <div>
+              <dt>Aim distance</dt>
+              <dd>
+                Euclidean distance in pixels from the crosshair to the anchor
+                15% down the target box. Normalized distance divides by the
+                image diagonal. The anchor is a geometric proxy, not a detected
+                head.
+              </dd>
+            </div>
+            <div>
+              <dt>Crosshair Alignment</dt>
+              <dd>
+                Percentage of sampled frames with confirmed targets where the
+                crosshair lies inside at least one confirmed box. Frames without
+                targets are excluded. This does not measure hits or damage.
+              </dd>
+            </div>
+            <div>
+              <dt>Acquisition proxy</dt>
+              <dd>
+                Time from the first continuous observation of a target to the
+                first crosshair entry into its box. Initially aligned events are
+                marked separately. Observation gaps restart timing; unaligned
+                events remain null.
+              </dd>
+            </div>
+            <div>
+              <dt>Crosshair location</dt>
+              <dd>
+                HSV and connected components locate a green crosshair near the
+                screen center. Failure falls back to center and records the
+                source per frame. Other colors require configuration.
+              </dd>
+            </div>
+            <div>
+              <dt>Current Data Limitations</dt>
+              <dd>
+                The supplied Twistzz spectator recording includes x-ray and
+                player UI. Distant, occluded, or edge targets may be missed. The
+                system cannot establish player visibility, team identity, shots,
+                or hits.
+              </dd>
+            </div>
+          </dl>
+          <div class="method-footer">
+            Python · OpenCV · Ultralytics YOLO11n · Custom IoU tracking
+            <a
+              href="https://docs.ultralytics.com/models/yolo11/"
+              target="_blank"
+              rel="noopener"
+              >Model documentation ↗</a
+            >
+          </div>
+        </section>
+        <section class="panel iteration-plan">
+          <h2>Next Experiments</h2>
+          <p>
+            Collect and annotate first-person recordings without x-ray →
+            fine-tune CS2 character/head detection → annotate visibility and
+            shot times → evaluate precision, recall, identity switches, and
+            event timing error.
+          </p>
+        </section>
+      </section>
+      <footer>
+        <span>FPSIGHT / VISION-BASED GAMEPLAY ANALYSIS</span
+        ><span>CIS 5810 · Prototype, not final evaluation</span>
+      </footer>
+    </main>
+    <dialog id="uploadDialog">
+      <form id="uploadForm">
+        <div class="dialog-heading">
+          <div>
+            <div class="eyebrow">NEW ANALYSIS</div>
+            <h2>Import your CS2 recording</h2>
+          </div>
+          <button
+            type="button"
+            id="closeDialog"
+            class="close-button"
+            aria-label="Close import dialog"
+          >
+            ×
+          </button>
+        </div>
+        <label class="drop-zone" id="dropZone"
+          ><svg><use href="#upload" /></svg
+          ><b id="fileLabel">Choose or drop a recording</b
+          ><span>MP4 / MOV / MKV / AVI · Up to 500 MB</span
+          ><input
+            type="file"
+            id="fileInput"
+            accept=".mp4,.mov,.mkv,.avi"
+            aria-label="Choose gameplay video"
+        /></label>
+        <div class="form-grid">
+          <label
+            >Detection confidence<input
+              id="confidenceInput"
+              type="number"
+              min="0.05"
+              max="0.95"
+              step="0.01"
+              value="0.12" /></label
+          ><label
+            >Sampling rate (FPS)<select id="fpsInput">
+              <option value="5">5 FPS · Faster</option>
+              <option value="10" selected>10 FPS · Recommended</option>
+              <option value="15">15 FPS</option>
+            </select></label
+          ><label
+            >Analysis duration (seconds)<input
+              id="secondsInput"
+              type="number"
+              min="1"
+              max="120"
+              value="30" /></label
+          ><label
+            >Crosshair position<select id="crosshairInput">
+              <option value="auto">Detect green crosshair</option>
+              <option value="center">Fixed screen center</option>
+            </select></label
+          >
+        </div>
+        <p class="upload-info">
+          Uses local YOLO11n to show character candidates and aim proxies. Use
+          first-person recordings with spectator x-ray disabled.
+        </p>
+        <div id="jobProgress" hidden>
+          <div class="progress-track"><span id="progressFill"></span></div>
+          <p id="progressText">Preparing analysis...</p>
+        </div>
+        <p id="uploadError" class="error" role="alert"></p>
+        <button type="submit" id="analyzeButton" class="primary full-width">
+          <svg><use href="#flask" /></svg>Start Local Analysis
+        </button>
+      </form>
+    </dialog>
+    <div id="toast" role="status" class="toast" hidden></div>
+  </body>
+</html>
