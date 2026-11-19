@@ -62,9 +62,9 @@
         <button class="nav-item active" data-page="review">
           <svg><use href="#grid" /></svg>Video Review<span>01</span></button
         ><button class="nav-item" data-page="experiments">
-          <svg><use href="#flask" /></svg>Experiments<span>02</span></button
+          <svg><use href="#flask" /></svg>Parameters &amp; Results<span>02</span></button
         ><button class="nav-item" data-page="method">
-          <svg><use href="#layers" /></svg>Method<span>03</span>
+          <svg><use href="#layers" /></svg>Metric Guide<span>03</span>
         </button>
       </nav>
       <div class="sidebar-label space">CURRENT SESSION</div>
@@ -75,10 +75,17 @@
           ><small>Recorded gameplay / analyzed sample</small></span
         ><svg><use href="#chevron" /></svg>
       </button>
+      <label class="demo-selector" for="sampleVariant">Demo mode
+        <select id="sampleVariant">
+          <option value="proposal">Standard</option>
+          <option value="i2">High resolution</option>
+          <option value="i3">Small targets</option>
+          <option value="i4">Multi-view</option>
+        </select>
+      </label>
       <div class="sidebar-bottom">
         <div class="local-status"><i></i> Local video analysis</div>
         <p>CIS 5810 · FALL 2026<br />Computer Vision Final Project</p>
-        <span class="version">PROTOTYPE v0.2</span>
       </div>
     </aside>
     <main>
@@ -93,7 +100,7 @@
       </header>
       <section class="page-heading">
         <div>
-          <div class="eyebrow">COMPUTER VISION × COUNTER-STRIKE 2</div>
+          <div class="eyebrow">CS2 GAMEPLAY REVIEW</div>
           <h1 id="pageTitle">Understand every aiming decision<span>.</span></h1>
           <p id="pageSubtitle">
             From gameplay video to target tracking, make aiming observable and
@@ -125,11 +132,8 @@
           </div>
         </div>
         <div class="stats-scope">
-          Improved version · Recording summary
-          <span
-            >Baseline changes the detection overlay; summary metrics remain for
-            the improved version.</span
-          >
+          <span><b id="summaryDetector">Standard</b> · Recording summary</span>
+          <span>Summary metrics use the selected mode.</span>
         </div>
         <div class="metrics">
           <article class="metric">
@@ -137,7 +141,7 @@
               Mean Aim Distance <svg><use href="#cross" /></svg>
             </div>
             <strong id="meanError">—</strong>
-            <p>Crosshair to upper-box reference point</p>
+            <p>Crosshair to upper target reference</p>
             <span class="metric-line orange"></span>
           </article>
           <article class="metric">
@@ -150,7 +154,7 @@
           </article>
           <article class="metric">
             <div>
-              Median Acquisition Proxy <svg><use href="#clock" /></svg>
+              Time to Alignment <svg><use href="#clock" /></svg>
             </div>
             <strong id="latency">—</strong>
             <p id="latencyNote">Observable acquisition proxy</p>
@@ -170,8 +174,8 @@
             <div class="panel-heading">
               <h2><i class="orange-dot"></i>Video Replay<span>REPLAY</span></h2>
               <div class="segmented" aria-label="Detection version">
-                <button class="active" id="improvedButton">Improved</button
-                ><button id="baselineButton">Baseline</button>
+                <button class="active" id="improvedButton">Targets</button
+                ><button id="baselineButton">Reference</button>
               </div>
             </div>
             <div class="video-stage" id="videoStage">
@@ -184,7 +188,7 @@
               ></video
               ><canvas id="overlay"></canvas
               ><span class="video-badge" id="frameBadge"
-                >YOLO11n + TRACKING</span
+                >Target tracking</span
               ><span class="frame-time" id="frameTime">00:00.00</span>
               <div class="video-loading" id="videoLoading">
                 Loading CS2 recording...
@@ -243,7 +247,7 @@
             </div>
             <dl class="frame-details">
               <div>
-                <dt>Detection confidence</dt>
+                <dt>Detection score</dt>
                 <dd id="liveConfidence">—</dd>
               </div>
               <div>
@@ -274,8 +278,8 @@
           <div class="panel-heading">
             <h2>Aim Distance Over Time<span>AIM ERROR / PX</span></h2>
             <div class="chart-legend">
-              <span><i class="legend orange"></i>Improved</span
-              ><span><i class="legend muted"></i>Baseline</span>
+              <span><i class="legend orange"></i>Selected mode</span
+              ><span><i class="legend muted"></i>Reference</span>
             </div>
           </div>
           <div
@@ -286,9 +290,9 @@
             aria-label="Select the distance chart to seek"
           ></div>
           <p class="chart-note">
-            Each curve measures its own detected targets; gaps indicate missing
-            measurements. Baseline uses box centers, while Improved uses
-            upper-box anchors. Lower distances do not establish higher accuracy.
+            Select the chart to seek in the replay. Gaps mark frames without
+            a tracked target. The reference curve measures distance to target
+            centers; the selected mode uses upper target reference points.
           </p>
         </section>
         <div class="bottom-grid">
@@ -304,8 +308,7 @@
               <h2>Export Your Analysis<span>EXPORT</span></h2>
             </div>
             <p>
-              Save frame measurements and target events for reproducible
-              experiments and presentations.
+              Download frame measurements, target events and the annotated replay.
             </p>
             <div class="export-links">
               <a id="csvDownload" download
@@ -319,158 +322,80 @@
         <div class="notice">
           <span>i</span>
           <p>
-            This is a video analysis prototype. Generic detections are character
-            candidates, without team classification. Spectator x-ray outlines do
-            not establish player visibility. Alignment is not hit accuracy, and
-            acquisition delay is not shooting reaction time.
+            Boxes show detected character candidates. Alignment and time to
+            alignment describe crosshair movement. Spectator recordings may
+            include characters hidden from the player.
           </p>
         </div>
       </section>
       <section id="experimentsPage" class="page" hidden>
         <div class="experiment-intro">
-          <span class="pill">ITERATION 01</span>
-          <h2>One recording. One measured iteration.</h2>
-          <p>
-            Compare full-frame detection with gameplay-region detection,
-            crosshair localization, and temporal tracking using the same model
-            and sampling settings. Values below come from the recorded run.
-          </p>
+          <span class="pill" id="experimentDetector">Standard</span>
+          <h2>Recording results</h2>
+          <p>Compare the reference view and selected mode on this recording.</p>
         </div>
         <div class="experiment-columns">
           <article class="panel method-card">
-            <span class="step-number">01 / BASELINE</span>
-            <h2>Frame-by-frame full-view detection</h2>
-            <p>
-              YOLO person class → screen-center crosshair → nearest target. No
-              persistent identity or observation continuity requirement.
-            </p>
+            <h2>Reference view</h2>
+            <p>Measurements from the full-view overlay.</p>
             <div id="baselineStats"></div>
           </article>
           <article class="panel method-card improved">
-            <span class="step-number">02 / ITERATION</span>
-            <h2>Gameplay Region + Temporal Tracking</h2>
-            <p>
-              Crop the HUD and filter weapon candidates. Locate the green
-              crosshair with HSV, confirm consecutive observations, and record
-              events per track.
-            </p>
+            <h2 id="selectedDetectorTitle">Standard</h2>
+            <p>Measurements from the selected analysis mode.</p>
             <div id="improvedStats"></div>
           </article>
         </div>
         <section class="panel experiment-result">
-          <h2>Interpreting the Results</h2>
+          <h2>Analysis parameters</h2>
           <div id="experimentDetails"></div>
-          <p>
-            No manually annotated test set is available. Counts and coverage
-            describe system behavior, not accuracy gains. Next, annotate
-            character boxes, player visibility, team identity, and event times.
-          </p>
-          <a id="experimentDownload" download>Download experiment.json ↗</a>
+          <a id="experimentDownload" download>Download result summary ↗</a>
         </section>
       </section>
       <section id="methodPage" class="page" hidden>
-        <div class="pipeline">
-          <article>
-            <span>01</span>
-            <h3>Video Input</h3>
-            <p>
-              MP4 / MOV / MKV / AVI<br />Local processing and temporal sampling
-            </p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Character Detection</h3>
-            <p>
-              YOLO11n person candidates<br />Gameplay crop and geometry filters
-            </p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Temporal Tracking</h3>
-            <p>
-              IoU and distance association<br />Consecutive confirmation and
-              persistent IDs
-            </p>
-          </article>
-          <article>
-            <span>04</span>
-            <h3>Measurement and Review</h3>
-            <p>
-              Aim distance / alignment / delay<br />Synchronized replay and CSV
-              export
-            </p>
-          </article>
-        </div>
         <section class="panel definitions">
-          <h2>Metric Definitions and Limitations</h2>
+          <h2>Reading your results</h2>
           <dl>
             <div>
               <dt>Aim distance</dt>
-              <dd>
-                Euclidean distance in pixels from the crosshair to the anchor
-                15% down the target box. Normalized distance divides by the
-                image diagonal. The anchor is a geometric proxy, not a detected
-                head.
-              </dd>
+              <dd>Distance in pixels from the crosshair to the upper reference
+                point of the selected target. Compare it with the replay to
+                review aiming movement.</dd>
             </div>
             <div>
-              <dt>Crosshair Alignment</dt>
-              <dd>
-                Percentage of sampled frames with confirmed targets where the
-                crosshair lies inside at least one confirmed box. Frames without
-                targets are excluded. This does not measure hits or damage.
-              </dd>
+              <dt>Crosshair alignment</dt>
+              <dd>Percentage of frames with tracked targets where the crosshair
+                is inside a target box. Frames without tracked targets are excluded.</dd>
             </div>
             <div>
-              <dt>Acquisition proxy</dt>
-              <dd>
-                Time from the first continuous observation of a target to the
-                first crosshair entry into its box. Initially aligned events are
-                marked separately. Observation gaps restart timing; unaligned
-                events remain null.
-              </dd>
+              <dt>Time to alignment</dt>
+              <dd>Time from a continuous target observation to the crosshair
+                entering its box. Targets already aligned at first observation
+                are listed separately. A dash means no eligible event.</dd>
             </div>
             <div>
-              <dt>Crosshair location</dt>
-              <dd>
-                HSV and connected components locate a green crosshair near the
-                screen center. Failure falls back to center and records the
-                source per frame. Other colors require configuration.
-              </dd>
+              <dt>Detection score threshold</dt>
+              <dd>Only candidates at or above this score are retained.
+                Lower values can show more targets and more unwanted boxes.
+                Scores indicate relative ranking.</dd>
             </div>
             <div>
-              <dt>Current Data Limitations</dt>
-              <dd>
-                The supplied Twistzz spectator recording includes x-ray and
-                player UI. Distant, occluded, or edge targets may be missed. The
-                system cannot establish player visibility, team identity, shots,
-                or hits.
-              </dd>
+              <dt>Sampling rate</dt>
+              <dd>Number of video frames analyzed each second. Higher rates
+                provide more timing detail and take longer to process.</dd>
+            </div>
+            <div>
+              <dt>Analysis modes</dt>
+              <dd>Standard, High resolution, Small targets and Multi-view
+                offer different detection settings. Compare the boxes and
+                tracked events on your recording. Multi-view takes longer.</dd>
             </div>
           </dl>
-          <div class="method-footer">
-            Python · OpenCV · Ultralytics YOLO11n · Custom IoU tracking
-            <a
-              href="https://docs.ultralytics.com/models/yolo11/"
-              target="_blank"
-              rel="noopener"
-              >Model documentation ↗</a
-            >
-          </div>
-        </section>
-        <section class="panel iteration-plan">
-          <h2>Next Experiments</h2>
-          <p>
-            Collect and annotate first-person recordings without x-ray →
-            fine-tune CS2 character/head detection → annotate visibility and
-            shot times → evaluate precision, recall, identity switches, and
-            event timing error.
-          </p>
         </section>
       </section>
       <footer>
         <span>FPSIGHT / VISION-BASED GAMEPLAY ANALYSIS</span
-        ><span>CIS 5810 · Prototype, not final evaluation</span>
+        ><span>CS2 · Local replay review</span>
       </footer>
     </main>
     <dialog id="uploadDialog">
@@ -500,13 +425,24 @@
             aria-label="Choose gameplay video"
         /></label>
         <div class="form-grid">
+          <label class="detector-field">Analysis mode
+            <select id="detectorInput">
+              <option value="proposal">Standard</option>
+              <option value="i2">High resolution</option>
+              <option value="i3">Small targets</option>
+              <option value="i4">Multi-view</option>
+            </select>
+          </label>
+          <p id="detectorHelp" class="upload-info detector-field">
+            Standard analysis settings.
+          </p>
           <label
-            >Detection confidence<input
+            >Detection score threshold<input
               id="confidenceInput"
               type="number"
-              min="0.05"
+              min="0.01"
               max="0.95"
-              step="0.01"
+              step="any"
               value="0.12" /></label
           ><label
             >Sampling rate (FPS)<select id="fpsInput">
@@ -529,8 +465,8 @@
           >
         </div>
         <p class="upload-info">
-          Uses local YOLO11n to show character candidates and aim proxies. Use
-          first-person recordings with spectator x-ray disabled.
+          Choose an analysis mode and score threshold, then review the
+          detected targets and aiming measurements in the replay.
         </p>
         <div id="jobProgress" hidden>
           <div class="progress-track"><span id="progressFill"></span></div>

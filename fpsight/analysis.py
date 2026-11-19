@@ -19,6 +19,8 @@ from statistics import mean, median
 import cv2
 import numpy as np
 
+from detector_profiles import DETECTOR_PROFILES, resolve_detector_options
+
 DEFAULT_OPTIONS = {
     "conf": 0.12,
     "sample_fps": 10.0,
@@ -27,6 +29,7 @@ DEFAULT_OPTIONS = {
     "tracking": True,
     "hud": True,
     "imgsz": 1280,
+    "detector": "proposal",
 }
 
 
@@ -324,7 +327,7 @@ def _annotate(frame, data, roi, hud):
     )
     cv2.putText(
         frame,
-        "FPSIGHT | CS2 VIDEO-ONLY CV BASELINE",
+        "FPSIGHT | " + DETECTOR_PROFILES[data.get("detector", "proposal")]["label"].replace("·", "|").upper(),
         (24, 35),
         cv2.FONT_HERSHEY_SIMPLEX,
         0.52,
@@ -409,11 +412,11 @@ def analyze_video(
     """Analyze one clip and save reproducible data and two presentation videos."""
     started = time.monotonic()
     opts = dict(DEFAULT_OPTIONS)
-    opts.update(options or {})
+    opts.update(resolve_detector_options(options))
     opts["conf"] = max(0.01, min(0.95, float(opts["conf"])))
     opts["sample_fps"] = max(1.0, min(30.0, float(opts["sample_fps"])))
     opts["max_seconds"] = max(0.1, min(300.0, float(opts["max_seconds"])))
-    opts["imgsz"] = max(320, min(1920, int(opts["imgsz"])))
+    opts["imgsz"] = max(320, min(2240, int(opts["imgsz"])))
     input_path, output_dir, model_path = (
         Path(input_path),
         Path(output_dir),
@@ -453,6 +456,15 @@ def analyze_video(
     from ultralytics import YOLO
 
     model = YOLO(str(model_path))
+    detector = opts["detector"]
+    profile = DETECTOR_PROFILES[detector]
+    if detector != "proposal":
+        from .predict_progression import run_frame
+
+    baseline_options = dict(opts)
+    if detector != "proposal":
+        baseline_options.update(conf=0.12, imgsz=1280)
+    detector_latencies = []
     tracker = TargetTracker(1 / analysis_fps, max(0.25, 2.5 / analysis_fps), 3)
     recorded_raw = output_dir / "recording_raw.mp4"
     annotated_raw = output_dir / "annotated_raw.mp4"
@@ -505,17 +517,29 @@ def analyze_video(
             crosshair = locate_crosshair(frame, opts["crosshair"])
             point = (crosshair["x"], crosshair["y"])
             fallback_frames += int(crosshair["source"] == "center_fallback")
-            baseline = _get_detections(model, frame, opts)
-            if opts["hud"]:
-                improved_raw = _get_detections(
-                    model,
-                    frame[roi[1] : roi[3], roi[0] : roi[2]],
-                    opts,
-                    (roi[0], roi[1]),
-                )
+            baseline = _get_detections(model, frame, baseline_options)
+            detection_started = time.perf_counter()
+            if detector == "proposal":
+                if opts["hud"]:
+                    improved_raw = _get_detections(
+                        model,
+                        frame[roi[1] : roi[3], roi[0] : roi[2]],
+                        opts,
+                        (roi[0], roi[1]),
+                    )
+                else:
+                    improved_raw = baseline
+                filtered = filter_detections(improved_raw, width, height, roi, opts["hud"])
+                detector_ms = (time.perf_counter() - detection_started) * 1000
             else:
-                improved_raw = baseline
-            filtered = filter_detections(improved_raw, width, height, roi, opts["hud"])
+                record = run_frame(model, frame, {detector: profile})[detector]
+                improved_raw = [
+                    {"box": row[:4], "confidence": row[4]}
+                    for row in record["detections"]
+                ]
+                filtered = [d for d in improved_raw if d["confidence"] >= opts["conf"]]
+                detector_ms = record["latency_ms"]
+            detector_latencies.append(detector_ms)
             if opts["tracking"]:
                 detections = tracker.update(filtered, timestamp, point)
             else:
@@ -595,6 +619,8 @@ def analyze_video(
                     for d in baseline
                 ],
                 "raw_roi_count": len(improved_raw),
+                "detector": detector,
+                "detector_ms": round(detector_ms, 3),
             }
             frames.append(data)
             annotated = _annotate(frame, data, roi, opts["hud"])
@@ -651,6 +677,8 @@ def analyze_video(
         "confirmed_frames": len(valid),
         "duration": round(duration, 3),
         "processing_seconds": round(time.monotonic() - started, 2),
+        "detector_median_ms": round(median(detector_latencies), 3),
+        "total_detections": sum(len(f["detections"]) for f in frames),
         "fps": native_fps,
         "analysis_fps": analysis_fps,
         "width": width,
@@ -700,12 +728,25 @@ def analyze_video(
             "Green crosshair localization failed in %d / %d sampled frames; screen center was used. Check each frame source field."
             % (fallback_frames, len(frames))
         )
+    if detector != "proposal":
+        limitations.append(
+            "Iteration scores use the development-selected small-box and tile-agreement rules. "
+            "They are ranking scores; false positives increased on separate replay recordings."
+        )
     experiment = {
-        "protocol": "Same local YOLO weights, confidence threshold, imgsz and sample timestamps. Baseline: full frame / fixed screen-center crosshair / nearest bbox center / no identity. Improved: local HSV crosshair (or configured center), optional gameplay crop + geometry filters + temporal confirmation; fixed upper-bbox anchor. Crosshair and geometry anchors differ, so mean errors are descriptive and cannot establish accuracy gains.",
+        "protocol": (
+            "The full-frame reference and selected detector use the same video and sample timestamps. "
+            "The selected detector feeds three-observation tracking, crosshair geometry and acquisition events. "
+            "Anchors and eligible frames differ, so aim metrics are descriptive. "
+            + ("Both detectors use the configured confidence and input size."
+               if detector == "proposal" else
+               "The full-frame reference uses confidence 0.12 and size 1280. "
+               "The selected iteration uses its recorded input size and post-rescoring threshold.")
+        ),
         "model_filename": model_path.name,
         "ground_truth_available": False,
         "config": {
-            k: opts[k] for k in ("conf", "sample_fps", "imgsz", "hud", "tracking")
+            k: opts[k] for k in ("detector", "conf", "sample_fps", "imgsz", "hud", "tracking")
         },
         "sampled_frames": len(frames),
         "baseline": {
@@ -753,8 +794,17 @@ def analyze_video(
         },
         "interpretation": "Counts and proxy distributions only. No precision, recall, mAP, hit accuracy or human reaction-time claim without annotated ground truth.",
     }
+    if detector != "proposal":
+        experiment["improved"]["scored_roi_candidates"] = experiment["improved"].pop("raw_roi_detections")
+        experiment["improved"]["score_rejections"] = experiment["improved"].pop("geometry_rejections")
+        experiment["improved"]["detector_median_ms"] = summary["detector_median_ms"]
+    experiment["detector"] = {
+        "id": detector, "label": profile["label"],
+        "threshold": opts["conf"], "imgsz": opts["imgsz"],
+        "baseline_conf": baseline_options["conf"], "baseline_imgsz": baseline_options["imgsz"],
+    }
     analysis = {
-        "version": "1.0",
+        "version": "1.1",
         "video": {
             "width": width,
             "height": height,
@@ -766,6 +816,7 @@ def analyze_video(
             "annotated": "annotated.mp4",
         },
         "options": opts,
+        "detector": experiment["detector"],
         "frames": frames,
         "summary": summary,
         "encounters": encounters,
@@ -796,6 +847,8 @@ def analyze_video(
         {
             "time": f["time"],
             "frame": f["frame"],
+            "detector": detector,
+            "detector_ms": f["detector_ms"],
             "crosshair_x": f["crosshair"]["x"],
             "crosshair_y": f["crosshair"]["y"],
             "crosshair_source": f["crosshair"]["source"],

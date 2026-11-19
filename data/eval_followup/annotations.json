@@ -1,0 +1,883 @@
+{
+  "size": [
+    960,
+    720
+  ],
+  "dimensions": [
+    960,
+    720
+  ],
+  "scope": "Living visible CS2 character from either team, in independent recordings cut from spectated game replays.",
+  "sources": {
+    "h01": {
+      "path": "../../../../cs2 demo/Counter-strike 2 2026.10.05 - 11.46.58.01.mp4",
+      "sha256": "0cffb18c5401d8c5dd9e49d2cdc07f0b4f51b4d6f1cd4bb0cc074df9d6a573fc"
+    },
+    "h02": {
+      "path": "../../../../cs2 demo/Counter-strike 2 2026.10.05 - 11.47.27.02.mp4",
+      "sha256": "3fd0f16e2a238a39e9affa750ab2f462bfc55187d6397257d8c9f40a66b5ed07"
+    },
+    "h03": {
+      "path": "../../../../cs2 demo/Counter-strike 2 2026.10.05 - 11.47.55.03.mp4",
+      "sha256": "123534b17aec364a7fe2637f62e18a33397256eceaa3766cc93888ed205ca94b"
+    },
+    "h04": {
+      "path": "../../../../cs2 demo/Counter-strike 2 2026.10.05 - 11.48.33.04.mp4",
+      "sha256": "2e7e9f0727456bd8009ce456ad257d4bf884b7fd550b93c3fda9a1f53400057c"
+    },
+    "h05": {
+      "path": "../../../../cs2 demo/Counter-strike 2 2026.10.05 - 11.49.29.05.mp4",
+      "sha256": "de3c57112d2beae30f6cc20c1c6a6f3554219f028ec9b2f62c8006be986f1460"
+    },
+    "h07": {
+      "path": "../../../../cs2 demo/Counter-strike 2 2026.10.05 - 11.52.40.07.mp4",
+      "sha256": "3c8018e4bf60cb51167c5e1abe21b31d4220d0c4847d05b803e0bc089ce9b4f6"
+    },
+    "h08": {
+      "path": "../../../../cs2 demo/Counter-strike 2 2026.10.05 - 11.54.42.08.mp4",
+      "sha256": "3590a19247d99198870c900a06c933f7474e801f0ff3034c881c0884a5583844"
+    }
+  },
+  "frames": [
+    {
+      "id": "h01_000",
+      "image": "frames/h01_000.jpg",
+      "split": "holdout",
+      "source": "h01",
+      "time_seconds": 0.24992,
+      "source_frame": 15,
+      "boxes": [],
+      "note": "The orange figure is behind the green box; its outline is excluded."
+    },
+    {
+      "id": "h01_002",
+      "image": "frames/h01_002.jpg",
+      "split": "holdout",
+      "source": "h01",
+      "time_seconds": 1.24961,
+      "source_frame": 75,
+      "boxes": []
+    },
+    {
+      "id": "h02_000",
+      "image": "frames/h02_000.jpg",
+      "split": "holdout",
+      "source": "h02",
+      "time_seconds": 0.25003,
+      "source_frame": 15,
+      "boxes": [],
+      "note": "The yellow overlay is inside the opaque corner wall."
+    },
+    {
+      "id": "h02_001",
+      "image": "frames/h02_001.jpg",
+      "split": "holdout",
+      "source": "h02",
+      "time_seconds": 0.75009,
+      "source_frame": 45,
+      "boxes": [
+        [
+          471,
+          347,
+          489,
+          393
+        ]
+      ]
+    },
+    {
+      "id": "h02_002",
+      "image": "frames/h02_002.jpg",
+      "split": "holdout",
+      "source": "h02",
+      "time_seconds": 1.25016,
+      "source_frame": 75,
+      "boxes": [
+        [
+          467,
+          353,
+          486,
+          389
+        ]
+      ],
+      "note": "A partly exposed moving silhouette right of the corner is visible."
+    },
+    {
+      "id": "h02_004",
+      "image": "frames/h02_004.jpg",
+      "split": "holdout",
+      "source": "h02",
+      "time_seconds": 2.25028,
+      "source_frame": 135,
+      "boxes": []
+    },
+    {
+      "id": "h02_006",
+      "image": "frames/h02_006.jpg",
+      "split": "holdout",
+      "source": "h02",
+      "time_seconds": 3.2504,
+      "source_frame": 195,
+      "boxes": []
+    },
+    {
+      "id": "h03_000",
+      "image": "frames/h03_000.jpg",
+      "split": "holdout",
+      "source": "h03",
+      "time_seconds": 0.24989,
+      "source_frame": 15,
+      "boxes": [
+        [
+          435,
+          401,
+          491,
+          543
+        ]
+      ]
+    },
+    {
+      "id": "h03_001",
+      "image": "frames/h03_001.jpg",
+      "split": "holdout",
+      "source": "h03",
+      "time_seconds": 0.74966,
+      "source_frame": 45,
+      "boxes": [
+        [
+          496,
+          437,
+          554,
+          569
+        ]
+      ]
+    },
+    {
+      "id": "h03_002",
+      "image": "frames/h03_002.jpg",
+      "split": "holdout",
+      "source": "h03",
+      "time_seconds": 1.24943,
+      "source_frame": 75,
+      "boxes": [
+        [
+          534,
+          439,
+          597,
+          558
+        ]
+      ]
+    },
+    {
+      "id": "h03_003",
+      "image": "frames/h03_003.jpg",
+      "split": "holdout",
+      "source": "h03",
+      "time_seconds": 1.7492,
+      "source_frame": 105,
+      "boxes": [
+        [
+          528,
+          422,
+          583,
+          525
+        ]
+      ]
+    },
+    {
+      "id": "h03_004",
+      "image": "frames/h03_004.jpg",
+      "split": "holdout",
+      "source": "h03",
+      "time_seconds": 2.24897,
+      "source_frame": 135,
+      "boxes": [
+        [
+          450,
+          381,
+          493,
+          476
+        ],
+        [
+          481,
+          353,
+          493,
+          380
+        ]
+      ],
+      "note": "A distant character appears to the right of the green box. Other highlights show through scenery."
+    },
+    {
+      "id": "h03_005",
+      "image": "frames/h03_005.jpg",
+      "split": "holdout",
+      "source": "h03",
+      "time_seconds": 2.74874,
+      "source_frame": 165,
+      "boxes": [
+        [
+          351,
+          380,
+          403,
+          481
+        ],
+        [
+          471,
+          352,
+          484,
+          381
+        ]
+      ],
+      "note": "Flashbang glare softens body edges."
+    },
+    {
+      "id": "h03_006",
+      "image": "frames/h03_006.jpg",
+      "split": "holdout",
+      "source": "h03",
+      "time_seconds": 3.24851,
+      "source_frame": 195,
+      "boxes": [
+        [
+          400,
+          377,
+          441,
+          473
+        ]
+      ]
+    },
+    {
+      "id": "h03_007",
+      "image": "frames/h03_007.jpg",
+      "split": "holdout",
+      "source": "h03",
+      "time_seconds": 3.74828,
+      "source_frame": 225,
+      "boxes": [
+        [
+          621,
+          317,
+          671,
+          374
+        ]
+      ],
+      "note": "The near character is visibly obscured by the wooden crate below the waist."
+    },
+    {
+      "id": "h04_000",
+      "image": "frames/h04_000.jpg",
+      "split": "holdout",
+      "source": "h04",
+      "time_seconds": 0.25,
+      "source_frame": 15,
+      "boxes": [
+        [
+          0,
+          322,
+          145,
+          536
+        ]
+      ]
+    },
+    {
+      "id": "h04_002",
+      "image": "frames/h04_002.jpg",
+      "split": "holdout",
+      "source": "h04",
+      "time_seconds": 1.24999,
+      "source_frame": 75,
+      "boxes": [
+        [
+          249,
+          348,
+          343,
+          464
+        ]
+      ]
+    },
+    {
+      "id": "h04_004",
+      "image": "frames/h04_004.jpg",
+      "split": "holdout",
+      "source": "h04",
+      "time_seconds": 2.24999,
+      "source_frame": 135,
+      "boxes": [
+        [
+          473,
+          356,
+          483,
+          385
+        ],
+        [
+          496,
+          362,
+          594,
+          544
+        ]
+      ]
+    },
+    {
+      "id": "h04_006",
+      "image": "frames/h04_006.jpg",
+      "split": "holdout",
+      "source": "h04",
+      "time_seconds": 3.24998,
+      "source_frame": 195,
+      "boxes": [
+        [
+          291,
+          346,
+          422,
+          536
+        ],
+        [
+          575,
+          349,
+          696,
+          637
+        ]
+      ]
+    },
+    {
+      "id": "h04_008",
+      "image": "frames/h04_008.jpg",
+      "split": "holdout",
+      "source": "h04",
+      "time_seconds": 4.24997,
+      "source_frame": 255,
+      "boxes": [
+        [
+          284,
+          306,
+          464,
+          590
+        ]
+      ]
+    },
+    {
+      "id": "h04_010",
+      "image": "frames/h04_010.jpg",
+      "split": "holdout",
+      "source": "h04",
+      "time_seconds": 5.24997,
+      "source_frame": 315,
+      "boxes": []
+    },
+    {
+      "id": "h04_012",
+      "image": "frames/h04_012.jpg",
+      "split": "holdout",
+      "source": "h04",
+      "time_seconds": 6.24996,
+      "source_frame": 375,
+      "boxes": [],
+      "note": "Flash obscures the right side; visible silhouettes on the left are through wall faces."
+    },
+    {
+      "id": "h04_014",
+      "image": "frames/h04_014.jpg",
+      "split": "holdout",
+      "source": "h04",
+      "time_seconds": 7.24996,
+      "source_frame": 435,
+      "boxes": []
+    },
+    {
+      "id": "h04_016",
+      "image": "frames/h04_016.jpg",
+      "split": "holdout",
+      "source": "h04",
+      "time_seconds": 8.24995,
+      "source_frame": 495,
+      "boxes": []
+    },
+    {
+      "id": "h04_018",
+      "image": "frames/h04_018.jpg",
+      "split": "holdout",
+      "source": "h04",
+      "time_seconds": 9.24994,
+      "source_frame": 555,
+      "boxes": [
+        [
+          438,
+          349,
+          453,
+          386
+        ],
+        [
+          469,
+          348,
+          485,
+          392
+        ]
+      ],
+      "note": "Only the exposed body portions in and to the right of the doorway are labeled."
+    },
+    {
+      "id": "h04_020",
+      "image": "frames/h04_020.jpg",
+      "split": "holdout",
+      "source": "h04",
+      "time_seconds": 10.24994,
+      "source_frame": 615,
+      "boxes": [
+        [
+          40,
+          339,
+          134,
+          499
+        ],
+        [
+          466,
+          351,
+          490,
+          394
+        ],
+        [
+          482,
+          344,
+          504,
+          391
+        ]
+      ],
+      "note": "Two exposed targets overlap at a distance; the left translucent silhouette remains behind the opaque wall."
+    },
+    {
+      "id": "h04_022",
+      "image": "frames/h04_022.jpg",
+      "split": "holdout",
+      "source": "h04",
+      "time_seconds": 11.24993,
+      "source_frame": 675,
+      "boxes": [
+        [
+          397,
+          334,
+          453,
+          446
+        ],
+        [
+          479,
+          348,
+          503,
+          398
+        ]
+      ],
+      "note": "Exclude red spectator highlights on opaque geometry. The fully exposed figure is labeled."
+    },
+    {
+      "id": "h04_024",
+      "image": "frames/h04_024.jpg",
+      "split": "holdout",
+      "source": "h04",
+      "time_seconds": 12.24993,
+      "source_frame": 735,
+      "boxes": [
+        [
+          372,
+          356,
+          481,
+          499
+        ],
+        [
+          650,
+          357,
+          677,
+          438
+        ]
+      ],
+      "note": "The figure collapsing against the back wall is a ragdoll; the two foreground standing figures are labeled."
+    },
+    {
+      "id": "h05_000",
+      "image": "frames/h05_000.jpg",
+      "split": "holdout",
+      "source": "h05",
+      "time_seconds": 0.25001,
+      "source_frame": 15,
+      "boxes": [
+        [
+          286,
+          360,
+          306,
+          398
+        ]
+      ]
+    },
+    {
+      "id": "h05_002",
+      "image": "frames/h05_002.jpg",
+      "split": "holdout",
+      "source": "h05",
+      "time_seconds": 1.25006,
+      "source_frame": 75,
+      "boxes": [
+        [
+          170,
+          351,
+          198,
+          390
+        ]
+      ]
+    },
+    {
+      "id": "h05_004",
+      "image": "frames/h05_004.jpg",
+      "split": "holdout",
+      "source": "h05",
+      "time_seconds": 2.2501,
+      "source_frame": 135,
+      "boxes": [
+        [
+          138,
+          352,
+          165,
+          402
+        ]
+      ]
+    },
+    {
+      "id": "h05_006",
+      "image": "frames/h05_006.jpg",
+      "split": "holdout",
+      "source": "h05",
+      "time_seconds": 3.25015,
+      "source_frame": 195,
+      "boxes": [
+        [
+          146,
+          351,
+          168,
+          400
+        ],
+        [
+          174,
+          362,
+          224,
+          443
+        ]
+      ]
+    },
+    {
+      "id": "h05_008",
+      "image": "frames/h05_008.jpg",
+      "split": "holdout",
+      "source": "h05",
+      "time_seconds": 4.25019,
+      "source_frame": 255,
+      "boxes": [
+        [
+          149,
+          354,
+          169,
+          401
+        ],
+        [
+          410,
+          359,
+          443,
+          421
+        ]
+      ]
+    },
+    {
+      "id": "h05_010",
+      "image": "frames/h05_010.jpg",
+      "split": "holdout",
+      "source": "h05",
+      "time_seconds": 5.25024,
+      "source_frame": 315,
+      "boxes": [],
+      "note": "The collapsed player in the doorway is a visible ragdoll and is excluded."
+    },
+    {
+      "id": "h05_012",
+      "image": "frames/h05_012.jpg",
+      "split": "holdout",
+      "source": "h05",
+      "time_seconds": 6.25028,
+      "source_frame": 375,
+      "boxes": [
+        [
+          129,
+          275,
+          163,
+          321
+        ],
+        [
+          416,
+          342,
+          443,
+          407
+        ]
+      ],
+      "note": "A living figure stands in the doorway alongside an older fallen body."
+    },
+    {
+      "id": "h05_014",
+      "image": "frames/h05_014.jpg",
+      "split": "holdout",
+      "source": "h05",
+      "time_seconds": 7.25032,
+      "source_frame": 435,
+      "boxes": [
+        [
+          200,
+          235,
+          228,
+          286
+        ],
+        [
+          458,
+          331,
+          479,
+          390
+        ]
+      ],
+      "note": "A red hit overlay covers the visible part of the doorway character."
+    },
+    {
+      "id": "h05_016",
+      "image": "frames/h05_016.jpg",
+      "split": "holdout",
+      "source": "h05",
+      "time_seconds": 8.25037,
+      "source_frame": 495,
+      "boxes": []
+    },
+    {
+      "id": "h07_000",
+      "image": "frames/h07_000.jpg",
+      "split": "holdout",
+      "source": "h07",
+      "time_seconds": 0.24997,
+      "source_frame": 15,
+      "boxes": []
+    },
+    {
+      "id": "h07_002",
+      "image": "frames/h07_002.jpg",
+      "split": "holdout",
+      "source": "h07",
+      "time_seconds": 1.24985,
+      "source_frame": 75,
+      "boxes": []
+    },
+    {
+      "id": "h07_004",
+      "image": "frames/h07_004.jpg",
+      "split": "holdout",
+      "source": "h07",
+      "time_seconds": 2.24972,
+      "source_frame": 135,
+      "boxes": [
+        [
+          451,
+          323,
+          487,
+          402
+        ],
+        [
+          834,
+          324,
+          874,
+          380
+        ]
+      ],
+      "note": "The foreground hit target is still upright in this sample; some of the distant legs are behind the railing."
+    },
+    {
+      "id": "h07_006",
+      "image": "frames/h07_006.jpg",
+      "split": "holdout",
+      "source": "h07",
+      "time_seconds": 3.2496,
+      "source_frame": 195,
+      "boxes": [
+        [
+          493,
+          343,
+          511,
+          380
+        ]
+      ]
+    },
+    {
+      "id": "h07_008",
+      "image": "frames/h07_008.jpg",
+      "split": "holdout",
+      "source": "h07",
+      "time_seconds": 4.24948,
+      "source_frame": 255,
+      "boxes": [],
+      "note": "The distant outline is seen through the ramp."
+    },
+    {
+      "id": "h07_012",
+      "image": "frames/h07_012.jpg",
+      "split": "holdout",
+      "source": "h07",
+      "time_seconds": 6.24923,
+      "source_frame": 375,
+      "boxes": [
+        [
+          130,
+          248,
+          140,
+          278
+        ]
+      ],
+      "note": "Only the narrow exposed lower-leg fragment in the doorway is distinguishable from the x-ray overlay."
+    },
+    {
+      "id": "h07_016",
+      "image": "frames/h07_016.jpg",
+      "split": "holdout",
+      "source": "h07",
+      "time_seconds": 8.24898,
+      "source_frame": 495,
+      "boxes": [
+        [
+          33,
+          286,
+          91,
+          366
+        ]
+      ]
+    },
+    {
+      "id": "h07_018",
+      "image": "frames/h07_018.jpg",
+      "split": "holdout",
+      "source": "h07",
+      "time_seconds": 9.24886,
+      "source_frame": 555,
+      "boxes": [],
+      "note": "Smoke occludes the view."
+    },
+    {
+      "id": "h07_020",
+      "image": "frames/h07_020.jpg",
+      "split": "holdout",
+      "source": "h07",
+      "time_seconds": 10.24873,
+      "source_frame": 615,
+      "boxes": [
+        [
+          420,
+          337,
+          463,
+          448
+        ]
+      ]
+    },
+    {
+      "id": "h07_022",
+      "image": "frames/h07_022.jpg",
+      "split": "holdout",
+      "source": "h07",
+      "time_seconds": 11.24861,
+      "source_frame": 675,
+      "boxes": []
+    },
+    {
+      "id": "h08_000",
+      "image": "frames/h08_000.jpg",
+      "split": "holdout",
+      "source": "h08",
+      "time_seconds": 0.25002,
+      "source_frame": 15,
+      "boxes": []
+    },
+    {
+      "id": "h08_006",
+      "image": "frames/h08_006.jpg",
+      "split": "holdout",
+      "source": "h08",
+      "time_seconds": 3.25021,
+      "source_frame": 195,
+      "boxes": []
+    },
+    {
+      "id": "h08_012",
+      "image": "frames/h08_012.jpg",
+      "split": "holdout",
+      "source": "h08",
+      "time_seconds": 6.2504,
+      "source_frame": 375,
+      "boxes": []
+    },
+    {
+      "id": "h08_016",
+      "image": "frames/h08_016.jpg",
+      "split": "holdout",
+      "source": "h08",
+      "time_seconds": 8.25053,
+      "source_frame": 495,
+      "boxes": [
+        [
+          451,
+          345,
+          470,
+          380
+        ]
+      ],
+      "note": "A distant torso and legs are visible through the open passage."
+    },
+    {
+      "id": "h08_020",
+      "image": "frames/h08_020.jpg",
+      "split": "holdout",
+      "source": "h08",
+      "time_seconds": 10.25066,
+      "source_frame": 615,
+      "boxes": []
+    },
+    {
+      "id": "h08_026",
+      "image": "frames/h08_026.jpg",
+      "split": "holdout",
+      "source": "h08",
+      "time_seconds": 13.25086,
+      "source_frame": 795,
+      "boxes": [],
+      "note": "The outline is behind crate panels."
+    },
+    {
+      "id": "h08_028",
+      "image": "frames/h08_028.jpg",
+      "split": "holdout",
+      "source": "h08",
+      "time_seconds": 14.25092,
+      "source_frame": 855,
+      "boxes": [
+        [
+          460,
+          345,
+          477,
+          388
+        ]
+      ]
+    },
+    {
+      "id": "h08_032",
+      "image": "frames/h08_032.jpg",
+      "split": "holdout",
+      "source": "h08",
+      "time_seconds": 16.25105,
+      "source_frame": 975,
+      "boxes": [
+        [
+          487,
+          342,
+          514,
+          403
+        ]
+      ]
+    }
+  ],
+  "annotation_method": "Codex visually annotated body bounding boxes from frame crops without viewing detector outputs. Independent human review pending.",
+  "split_method": "One frozen holdout across six Dust II clips and one Nuke clip taken from three local replay matches. Candidate timestamps were generated at 2 Hz. The subset was chosen by raw clip inspection for visible players, backgrounds, and gameplay variation. Near-duplicate Nuke clip h06 was excluded before evaluation.",
+  "target": "One tight box around the rendered visible body of each living character from either team. Exclude first-person hands/weapons, HUD, purely x-ray geometry, and recognizable corpses/ragdolls."
+}

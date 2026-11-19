@@ -1,0 +1,47 @@
+{
+  "protocol": "The full-frame reference and selected detector use the same video and sample timestamps. The selected detector feeds three-observation tracking, crosshair geometry and acquisition events. Anchors and eligible frames differ, so aim metrics are descriptive. Both detectors use the configured confidence and input size.",
+  "model_filename": "yolo11n.pt",
+  "ground_truth_available": false,
+  "config": {
+    "detector": "proposal",
+    "conf": 0.12,
+    "sample_fps": 10.0,
+    "imgsz": 1280,
+    "hud": true,
+    "tracking": true
+  },
+  "sampled_frames": 240,
+  "baseline": {
+    "total_detections": 121,
+    "detected_frames": 70,
+    "coverage_pct": 29.17,
+    "mean_error_px": 284.78,
+    "alignment_pct": 8.57,
+    "naive_latency_events": 4,
+    "naive_latency_median_ms": 0.0,
+    "naive_zero_latency_events": 4
+  },
+  "improved": {
+    "raw_roi_detections": 128,
+    "total_detections": 72,
+    "geometry_rejections": 56,
+    "detected_frames": 53,
+    "confirmed_frames": 11,
+    "coverage_pct": 22.08,
+    "confirmed_tracks": 7,
+    "mean_error_px": 98.55,
+    "alignment_pct": 9.09,
+    "acquisition_events": 1,
+    "median_acquisition_ms": 100.0,
+    "already_aligned_encounters": 1
+  },
+  "interpretation": "Counts and proxy distributions only. No precision, recall, mAP, hit accuracy or human reaction-time claim without annotated ground truth.",
+  "detector": {
+    "id": "proposal",
+    "label": "I1 · Original ROI",
+    "threshold": 0.12,
+    "imgsz": 1280,
+    "baseline_conf": 0.12,
+    "baseline_imgsz": 1280
+  }
+}

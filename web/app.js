@@ -8,7 +8,8 @@ let analysis = null,
   baseline = false,
   file = null,
   busy = false,
-  toastTimer = null;
+  toastTimer = null,
+  detectorProfiles = {};
 const video = $("video"),
   canvas = $("overlay"),
   ctx = canvas.getContext("2d");
@@ -38,6 +39,14 @@ const artifact = (key, fallback) => {
   return name.startsWith("/") ? name : prefix + name;
 };
 
+const modeLabels = {
+  proposal: "Standard",
+  i2: "High resolution",
+  i3: "Small targets",
+  i4: "Multi-view",
+};
+const detectorLabel = () => modeLabels[analysis?.options?.detector || "proposal"] || "Standard";
+
 // Navigation and analysis loading.
 function notify(text) {
   $("toast").textContent = text;
@@ -60,14 +69,14 @@ function page(name) {
       "From gameplay video to target tracking, make aiming observable and reviewable.",
     ],
     experiments: [
-      "Experiments",
-      "Make every iteration measurable",
-      "Start with a simple baseline and record behavior, limitations, and next experiments.",
+      "Parameters & Results",
+      "Review your analysis results",
+      "Explore recording statistics and the settings used for this analysis.",
     ],
     method: [
-      "Method",
-      "Understand the vision behind the metrics",
-      "Define each measurement and make the limitations explicit.",
+      "Metric Guide",
+      "Understand your measurements",
+      "Read the scores, alignment and timing shown in your replay.",
     ],
   };
   $("crumb").textContent = titles[name][0];
@@ -83,7 +92,7 @@ document
   .querySelectorAll(".nav-item")
   .forEach((el) => el.addEventListener("click", () => page(el.dataset.page)));
 
-async function loadAnalysis(data, base, name) {
+async function loadAnalysis(data, base, name, atTime = 0.3) {
   analysis = data;
   prefix = base;
   baseline = false;
@@ -95,13 +104,18 @@ async function loadAnalysis(data, base, name) {
   $("sessionMeta").textContent =
     `${v.width} × ${v.height} / ${fmt(v.duration, 1)}s / ${fmt(v.analysis_fps, 0)} FPS analysis`;
   $("analysisState").textContent = "Analysis complete";
+  $("summaryDetector").textContent = detectorLabel();
+  $("improvedButton").textContent = "Targets";
+  if (s.detector_median_ms !== undefined) {
+    $("sessionMeta").textContent += ` / ${fmt(s.detector_median_ms, 0)} ms detection`;
+  }
   metric("meanError", s.mean_error_px, "px");
   metric("alignment", s.alignment_pct, "%");
   metric("latency", s.median_acquisition_ms, "ms", 0);
   metric("trackCount", s.confirmed_tracks, "tracks", 0);
   $("latencyNote").textContent =
     s.median_acquisition_ms === null
-      ? "No eligible acquisition events"
+      ? "No eligible alignment events"
       : `${s.acquired_encounters} eligible event${s.acquired_encounters === 1 ? "" : "s"} · ${fmt(1000 / v.analysis_fps, 0)} ms sampling interval`;
   $("coverage").textContent =
     `Confirmed targets in ${s.confirmed_frames} / ${s.total_frames} sampled frames`;
@@ -114,7 +128,7 @@ async function loadAnalysis(data, base, name) {
   video.addEventListener(
     "loadeddata",
     () => {
-      video.currentTime = Math.min(0.3, v.duration * 0.1);
+      video.currentTime = Math.min(atTime, v.duration);
       $("videoLoading").hidden = true;
       draw();
     },
@@ -195,11 +209,16 @@ function buildEvents() {
 function buildFeedback() {
   const parent = $("feedback");
   parent.replaceChildren();
-  const messages = analysis.feedback?.length
-    ? analysis.feedback
-    : [
-        "Insufficient confirmed targets. Check the model, recording, and confidence threshold.",
-      ];
+  const s = analysis.summary;
+  const messages = [
+    `Targets appeared in ${s.detected_frames} of ${s.total_frames} analyzed frames, with tracked targets in ${s.confirmed_frames} frames.`,
+    s.mean_error_px === null
+      ? "No tracked aim-distance measurements are available. Review the recording or adjust the score threshold."
+      : `Mean crosshair distance was ${fmt(s.mean_error_px)} px. Select the distance chart to review specific moments.`,
+    s.median_acquisition_ms === null
+      ? "No eligible time-to-alignment events were recorded."
+      : `Median time to alignment was ${fmt(s.median_acquisition_ms, 0)} ms across ${s.acquired_encounters} events.`,
+  ];
   messages.slice(0, 3).forEach((text, i) => {
     const el = document.createElement("div");
     el.className = "observation";
@@ -229,8 +248,8 @@ function setArm(value) {
   $("improvedButton").classList.toggle("active", !value);
   $("baselineButton").classList.toggle("active", value);
   $("frameBadge").textContent = value
-    ? "YOLO11n / FULL-FRAME BASELINE"
-    : "YOLO11n + ROI + TRACKING";
+    ? "Reference view"
+    : detectorLabel() + " · Target tracking";
   draw();
 }
 
@@ -251,7 +270,7 @@ function draw() {
         source: "center_config",
       }
     : f.crosshair;
-  if ($("showRoi").checked && !baseline) {
+  if ($("showRoi").checked && !baseline && analysis.options?.hud !== false) {
     const w = canvas.width,
       h = canvas.height;
     ctx.fillStyle = "rgba(5,9,15,.40)";
@@ -292,7 +311,7 @@ function draw() {
       ctx.strokeRect(x1, y1, x2 - x1, y2 - y1);
       ctx.setLineDash([]);
       ctx.font = "bold 12px monospace";
-      const label = `${baseline ? "PERSON" : d.confirmed ? "TRACK" : "CANDIDATE"} ${d.id ?? i + 1}  ${fmt(d.confidence * 100, 0)}%`;
+      const label = `${baseline ? "PERSON" : d.confirmed ? "TRACK" : "CANDIDATE"} ${d.id ?? i + 1}  score ${fmt(d.confidence, 2)}`;
       const tw = ctx.measureText(label).width;
       ctx.fillStyle = "rgba(10,15,13,.88)";
       ctx.fillRect(x1, Math.max(32, y1 - 24), tw + 13, 20);
@@ -345,7 +364,7 @@ function draw() {
     : "—";
   $("targetStatus").textContent = selected
     ? baseline
-      ? "Baseline candidate"
+      ? "Reference candidate"
       : selected.on_target
         ? "Aligned"
         : selected.confirmed
@@ -353,13 +372,13 @@ function draw() {
           : "Pending confirmation"
     : "No confirmed target";
   $("liveConfidence").textContent = selected
-    ? `${fmt(selected.confidence * 100, 1)}%`
+    ? fmt(selected.confidence, 3)
     : "—";
   $("liveError").textContent =
     `${fmt(baseline ? f.baseline_error_px : f.aim_error_px)}${(baseline ? f.baseline_error_px : f.aim_error_px) !== null ? " px" : ""}`;
   $("liveCrosshair").textContent =
     cp.source === "hsv"
-      ? "HSV localization"
+      ? "Detected crosshair"
       : cp.source === "center_config"
         ? "Fixed screen center"
         : "Center fallback";
@@ -585,31 +604,28 @@ $("chart").addEventListener("keydown", (e) => {
   }
 });
 
-// Baseline and iteration comparison.
+// Recording statistics and analysis parameters.
 function buildExperiment() {
   if (!experiment) return;
+  $("experimentDetector").textContent = detectorLabel();
+  $("selectedDetectorTitle").textContent = detectorLabel();
   const labels = {
-    total_detections: "Total candidate detections",
-    raw_roi_detections: "Raw ROI detections",
-    geometry_rejections: "Geometry rejections",
-    coverage_pct: "Candidate frame coverage (%)",
-    naive_latency_events: "Baseline delay events",
-    naive_zero_latency_events: "Baseline zero-delay events",
-    acquisition_events: "Eligible acquisition events",
-    already_aligned_encounters: "Initially aligned events",
-    detected_frames: "Frames with candidates",
-    confirmed_frames: "Frames with confirmed targets",
-    confirmed_tracks: "Confirmed tracks",
+    total_detections: "Target observations",
+    coverage_pct: "Frames with targets (%)",
+    detected_frames: "Frames with targets",
+    confirmed_frames: "Frames with tracked targets",
+    confirmed_tracks: "Tracked targets",
     mean_error_px: "Mean aim distance (px)",
-    alignment_pct: "Alignment (%)",
-    median_acquisition_ms: "Median acquisition proxy (ms)",
-    naive_latency_median_ms: "Baseline global median delay (ms)",
+    alignment_pct: "Crosshair alignment (%)",
+    acquisition_events: "Alignment events",
+    already_aligned_encounters: "Initially aligned events",
+    median_acquisition_ms: "Time to alignment (ms)",
+    detector_median_ms: "Detection time per frame (ms)",
   };
   for (const arm of ["baseline", "improved"]) {
     const el = $(arm + "Stats");
     el.replaceChildren();
     const stats = experiment[arm] || experiment.arms?.[arm] || {};
-    let rows = 0;
     for (const [key, label] of Object.entries(labels)) {
       if (!(key in stats)) continue;
       const row = document.createElement("div");
@@ -622,6 +638,7 @@ function buildExperiment() {
         key.includes("frames") ||
           key.includes("tracks") ||
           key.includes("detections") ||
+          key.includes("candidates") ||
           key.includes("rejections") ||
           key.includes("events") ||
           key.includes("encounters")
@@ -630,32 +647,45 @@ function buildExperiment() {
       );
       row.append(l, n);
       el.append(row);
-      rows++;
     }
-    if (!rows)
-      for (const [key, value] of Object.entries(stats)) {
-        if (typeof value !== "number") continue;
-        const row = document.createElement("div");
-        row.className = "stats-row";
-        const l = document.createElement("span");
-        l.textContent = labels[key] || key;
-        const n = document.createElement("strong");
-        n.textContent = fmt(value, Number.isInteger(value) ? 0 : 1);
-        row.append(l, n);
-        el.append(row);
-      }
   }
   const el = $("experimentDetails");
   el.replaceChildren();
-  const facts = document.createElement("div");
-  facts.className = "experiment-facts";
-  facts.textContent = `YOLO11n · CONF ${analysis.options.conf} · IMG ${analysis.options.imgsz} · ${analysis.video.analysis_fps} FPS · ${analysis.summary.total_frames} SAMPLES`;
-  el.append(facts);
-  const p = document.createElement("p");
-  p.textContent =
-    "This iteration changes the detection region, filtering, crosshair localization, and tracking together. Mean distance depends on target selection, anchors, and missed detections; it does not establish a change in player skill.";
-  el.append(p);
+  const params = [
+    ["Analysis mode", detectorLabel()],
+    ["Score threshold", fmt(analysis.options.conf, 4)],
+    ["Analysis size", fmt(analysis.options.imgsz, 0) + " px"],
+    ["Sampling rate", fmt(analysis.video.analysis_fps, 0) + " FPS"],
+    ["Analyzed frames", fmt(analysis.summary.total_frames, 0)],
+    ["Recording duration", fmt(analysis.video.duration, 1) + " s"],
+    ["Processing time", fmt(analysis.summary.processing_seconds, 1) + " s"],
+  ];
+  for (const [label, value] of params) {
+    const row = document.createElement("div");
+    row.className = "stats-row";
+    const name = document.createElement("span");
+    name.textContent = label;
+    const number = document.createElement("strong");
+    number.textContent = value;
+    row.append(name, number);
+    el.append(row);
+  }
 }
+
+function applyDetectorPreset() {
+  const id = $("detectorInput").value;
+  const profile = detectorProfiles[id];
+  if (profile) $("confidenceInput").value = profile.conf;
+  const descriptions = {
+    proposal: "Standard detection settings for reviewing target movement.",
+    i2: "Higher analysis resolution. Takes longer to process.",
+    i3: "Settings that retain more small candidates. Check the replay for unwanted boxes.",
+    i4: "Additional views of the frame. Takes longer to process and can show more unwanted boxes.",
+  };
+  $("detectorHelp").textContent = descriptions[id];
+}
+
+$("detectorInput").addEventListener("change", applyDetectorPreset);
 
 // Local uploads and job progress.
 function openUpload() {
@@ -713,6 +743,7 @@ $("uploadForm").addEventListener("submit", async (e) => {
     return;
   }
   busy = true;
+  $("sampleVariant").disabled = true;
   $("analyzeButton").disabled = true;
   $("jobProgress").hidden = false;
   $("uploadError").textContent = "";
@@ -722,12 +753,12 @@ $("uploadForm").addEventListener("submit", async (e) => {
     const q = new URLSearchParams({
       filename: file.name,
       conf: $("confidenceInput").value,
+      detector: $("detectorInput").value,
       sample_fps: $("fpsInput").value,
       max_seconds: $("secondsInput").value,
       crosshair: $("crosshairInput").value,
       tracking: "true",
       hud: "true",
-      imgsz: "1280",
     });
     const r = await fetch("/api/analyze?" + q, {
       method: "POST",
@@ -765,34 +796,50 @@ $("uploadForm").addEventListener("submit", async (e) => {
       "Analysis did not complete. Adjust settings and retry.";
   } finally {
     busy = false;
+    $("sampleVariant").disabled = false;
     $("analyzeButton").disabled = false;
   }
 });
 
-$("sampleButton").addEventListener("click", async () => {
-  if (busy) {
-    notify(
-      "A recording is being analyzed. Switch to the sample after completion.",
-    );
+let sampleLoading = false;
+async function loadSample() {
+  if (busy || sampleLoading) {
+    $("sampleVariant").value = analysis?.options?.detector || "proposal";
+    notify("Wait for the current analysis or demo to finish loading.");
     return;
   }
+  sampleLoading = true;
+  $("sampleVariant").disabled = true;
   try {
-    const data = await fetch("/api/sample").then((r) => {
-      if (!r.ok) throw Error("Could not load sample");
-      return r.json();
-    });
-    await loadAnalysis(data, "/data/sample/");
-    history.replaceState(null, "", "/");
+    const id = $("sampleVariant").value;
+    const r = await fetch("/api/sample?detector=" + encodeURIComponent(id));
+    const data = await r.json();
+    if (!r.ok) throw Error(data.error || "Could not load demo");
+    await loadAnalysis(data, data.sample_prefix || "/data/sample/", null, video.currentTime);
+    $("detectorInput").value = id;
+    applyDetectorPreset();
+    history.replaceState(null, "", "/?demo=" + id);
     page("review");
-    notify("Loaded the bundled gameplay sample.");
+    notify("Loaded " + detectorLabel() + ".");
   } catch (err) {
+    $("sampleVariant").value = analysis?.options?.detector || "proposal";
     notify(err.message);
+  } finally {
+    sampleLoading = false;
+    $("sampleVariant").disabled = false;
   }
-});
+}
+
+$("sampleButton").addEventListener("click", loadSample);
+$("sampleVariant").addEventListener("change", loadSample);
 
 (async () => {
   try {
-    const saved = new URLSearchParams(location.search).get("run");
+    const health = await fetch("/api/health").then((r) => r.json());
+    detectorProfiles = health.detectors || {};
+    applyDetectorPreset();
+    const params = new URLSearchParams(location.search);
+    const saved = params.get("run");
     if (saved && /^[0-9a-f]{32}$/.test(saved)) {
       const r = await fetch("/api/jobs/" + saved);
       const job = await r.json();
@@ -806,9 +853,14 @@ $("sampleButton").addEventListener("click", async () => {
       }
       notify("Saved analysis is unavailable. Loaded the bundled sample.");
     }
-    const r = await fetch("/api/sample");
-    if (!r.ok) throw Error("Sample not ready");
-    await loadAnalysis(await r.json(), "/data/sample/");
+    const demo = params.get("demo") || "proposal";
+    $("sampleVariant").value = detectorProfiles[demo] ? demo : "proposal";
+    const r = await fetch("/api/sample?detector=" + $("sampleVariant").value);
+    if (!r.ok) throw Error("Demo not ready");
+    const data = await r.json();
+    await loadAnalysis(data, data.sample_prefix || "/data/sample/");
+    $("detectorInput").value = data.options?.detector || "proposal";
+    applyDetectorPreset();
   } catch (err) {
     $("analysisState").textContent = "Sample not ready";
     $("videoLoading").textContent =

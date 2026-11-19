@@ -1,0 +1,48 @@
+{
+  "protocol": "The full-frame reference and selected detector use the same video and sample timestamps. The selected detector feeds three-observation tracking, crosshair geometry and acquisition events. Anchors and eligible frames differ, so aim metrics are descriptive. The full-frame reference uses confidence 0.12 and size 1280. The selected iteration uses its recorded input size and post-rescoring threshold.",
+  "model_filename": "yolo11n.pt",
+  "ground_truth_available": false,
+  "config": {
+    "detector": "i4",
+    "conf": 0.29818594455718994,
+    "sample_fps": 10.0,
+    "imgsz": 2240,
+    "hud": true,
+    "tracking": true
+  },
+  "sampled_frames": 240,
+  "baseline": {
+    "total_detections": 121,
+    "detected_frames": 70,
+    "coverage_pct": 29.17,
+    "mean_error_px": 284.78,
+    "alignment_pct": 8.57,
+    "naive_latency_events": 4,
+    "naive_latency_median_ms": 0.0,
+    "naive_zero_latency_events": 4
+  },
+  "improved": {
+    "total_detections": 77,
+    "detected_frames": 54,
+    "confirmed_frames": 5,
+    "coverage_pct": 22.5,
+    "confirmed_tracks": 3,
+    "mean_error_px": 105.05,
+    "alignment_pct": 0.0,
+    "acquisition_events": 0,
+    "median_acquisition_ms": null,
+    "already_aligned_encounters": 0,
+    "score_rejections": 911,
+    "detector_median_ms": 553.126,
+    "scored_roi_candidates": 988
+  },
+  "interpretation": "Counts and proxy distributions only. No precision, recall, mAP, hit accuracy or human reaction-time claim without annotated ground truth.",
+  "detector": {
+    "id": "i4",
+    "label": "I4 \u00b7 Tile agreement",
+    "threshold": 0.29818594455718994,
+    "imgsz": 2240,
+    "baseline_conf": 0.12,
+    "baseline_imgsz": 1280
+  }
+}

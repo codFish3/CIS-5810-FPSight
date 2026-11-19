@@ -1,0 +1,8 @@
+id,segment,start,end,acquisition_ms,initial_error_px,already_aligned,observations,confidence,censored_reason
+1,1,0.0,0.4,,162.39,False,5,0.2915,unobserved_gap
+2,1,0.0,0.4,,118.77,False,5,0.2069,unobserved_gap
+3,3,0.8,1.0,,180.02,False,3,0.6741,unobserved_gap
+11,1,2.7,2.9,,45.65,False,3,0.6285,unobserved_gap
+14,1,3.3,3.6,100.0,31.62,False,4,0.7399,
+21,2,5.6,5.9,,178.96,False,4,0.748,unobserved_gap
+22,1,6.1,6.4,0.0,18.35,True,4,0.4383,

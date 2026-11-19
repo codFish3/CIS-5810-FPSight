@@ -1782,3 +1782,28 @@ a[aria-disabled="true"] {
     display: none;
   }
 }
+
+
+.demo-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 18px 20px;
+  color: var(--sub);
+  font-size: 11px;
+}
+.demo-selector select {
+  width: 100%;
+  padding: 10px 6px;
+  background: #0f1216;
+  color: var(--text);
+  border: 1px solid #343a43;
+  border-radius: 4px;
+  font-size: 11px;
+}
+.detector-field {
+  grid-column: 1 / -1;
+}
+.form-grid .detector-field.upload-info {
+  margin: 0;
+}

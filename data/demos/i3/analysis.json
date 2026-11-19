@@ -1,0 +1,7299 @@
+{
+  "version": "1.1",
+  "video": {
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "analysis_fps": 10.0,
+    "duration": 24.0,
+    "source": "source.mp4",
+    "recording": "recording.mp4",
+    "annotated": "annotated.mp4"
+  },
+  "options": {
+    "conf": 0.22722969949245453,
+    "sample_fps": 10.0,
+    "max_seconds": 24.0,
+    "crosshair": "auto",
+    "tracking": true,
+    "hud": true,
+    "imgsz": 2240,
+    "detector": "i3"
+  },
+  "detector": {
+    "id": "i3",
+    "label": "I3 · Small-box rescoring",
+    "threshold": 0.22722969949245453,
+    "imgsz": 2240,
+    "baseline_conf": 0.12,
+    "baseline_imgsz": 1280
+  },
+  "frames": [
+    {
+      "time": 0.0,
+      "frame": 0,
+      "crosshair": {
+        "x": 637.37,
+        "y": 361.41,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 1,
+          "box": [
+            728.19,
+            321.22,
+            833.86,
+            432.63
+          ],
+          "confidence": 0.5198,
+          "confirmed": false,
+          "aim": [
+            781.02,
+            337.93
+          ],
+          "on_target": false
+        },
+        {
+          "id": 2,
+          "box": [
+            761.16,
+            321.8,
+            833.25,
+            432.78
+          ],
+          "confidence": 0.2418,
+          "confirmed": false,
+          "aim": [
+            797.21,
+            338.45
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 142.45,
+      "baseline_count": 4,
+      "baseline_detections": [
+        {
+          "box": [
+            43.04,
+            221.15,
+            352.2,
+            571.0
+          ],
+          "confidence": 0.4824
+        },
+        {
+          "box": [
+            763.26,
+            321.32,
+            833.19,
+            434.16
+          ],
+          "confidence": 0.3543
+        },
+        {
+          "box": [
+            57.05,
+            393.97,
+            353.4,
+            572.64
+          ],
+          "confidence": 0.2427
+        },
+        {
+          "box": [
+            730.51,
+            320.7,
+            832.22,
+            434.36
+          ],
+          "confidence": 0.1762
+        }
+      ],
+      "raw_roi_count": 17,
+      "detector": "i3",
+      "detector_ms": 180.535
+    },
+    {
+      "time": 0.1,
+      "frame": 3,
+      "crosshair": {
+        "x": 637.37,
+        "y": 361.41,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 1,
+          "box": [
+            728.92,
+            321.51,
+            834.01,
+            432.1
+          ],
+          "confidence": 0.5378,
+          "confirmed": false,
+          "aim": [
+            781.47,
+            338.1
+          ],
+          "on_target": false
+        },
+        {
+          "id": 2,
+          "box": [
+            760.76,
+            321.76,
+            833.21,
+            432.91
+          ],
+          "confidence": 0.2481,
+          "confirmed": false,
+          "aim": [
+            796.98,
+            338.43
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 142.56,
+      "baseline_count": 5,
+      "baseline_detections": [
+        {
+          "box": [
+            41.63,
+            261.45,
+            352.97,
+            571.11
+          ],
+          "confidence": 0.4593
+        },
+        {
+          "box": [
+            763.31,
+            321.45,
+            833.3,
+            434.19
+          ],
+          "confidence": 0.3702
+        },
+        {
+          "box": [
+            56.19,
+            392.7,
+            353.52,
+            572.51
+          ],
+          "confidence": 0.1994
+        },
+        {
+          "box": [
+            730.63,
+            320.89,
+            832.29,
+            434.45
+          ],
+          "confidence": 0.1819
+        },
+        {
+          "box": [
+            269.29,
+            195.95,
+            329.95,
+            281.7
+          ],
+          "confidence": 0.1337
+        }
+      ],
+      "raw_roi_count": 18,
+      "detector": "i3",
+      "detector_ms": 167.795
+    },
+    {
+      "time": 0.2,
+      "frame": 6,
+      "crosshair": {
+        "x": 637.37,
+        "y": 361.41,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 1,
+          "box": [
+            728.95,
+            321.53,
+            834.04,
+            431.99
+          ],
+          "confidence": 0.5296,
+          "confirmed": true,
+          "aim": [
+            781.49,
+            338.1
+          ],
+          "on_target": false
+        },
+        {
+          "id": 2,
+          "box": [
+            761.81,
+            321.89,
+            833.17,
+            432.76
+          ],
+          "confidence": 0.2598,
+          "confirmed": true,
+          "aim": [
+            797.49,
+            338.52
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": 1,
+      "aim_error_px": 145.99,
+      "aim_error_norm": 0.099409,
+      "on_target": false,
+      "confirmed_count": 2,
+      "baseline_error_px": 142.65,
+      "baseline_count": 5,
+      "baseline_detections": [
+        {
+          "box": [
+            42.01,
+            262.48,
+            352.16,
+            571.12
+          ],
+          "confidence": 0.4418
+        },
+        {
+          "box": [
+            763.09,
+            321.49,
+            833.15,
+            434.22
+          ],
+          "confidence": 0.4055
+        },
+        {
+          "box": [
+            50.7,
+            399.32,
+            357.31,
+            573.04
+          ],
+          "confidence": 0.2113
+        },
+        {
+          "box": [
+            730.89,
+            320.95,
+            832.19,
+            434.49
+          ],
+          "confidence": 0.1782
+        },
+        {
+          "box": [
+            269.28,
+            196.02,
+            330.01,
+            281.55
+          ],
+          "confidence": 0.1435
+        }
+      ],
+      "raw_roi_count": 17,
+      "detector": "i3",
+      "detector_ms": 166.267
+    },
+    {
+      "time": 0.3,
+      "frame": 9,
+      "crosshair": {
+        "x": 637.37,
+        "y": 361.41,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 1,
+          "box": [
+            728.94,
+            321.53,
+            834.02,
+            431.98
+          ],
+          "confidence": 0.5277,
+          "confirmed": true,
+          "aim": [
+            781.48,
+            338.1
+          ],
+          "on_target": false
+        },
+        {
+          "id": 2,
+          "box": [
+            761.87,
+            321.9,
+            833.16,
+            432.77
+          ],
+          "confidence": 0.2629,
+          "confirmed": true,
+          "aim": [
+            797.52,
+            338.53
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": 1,
+      "aim_error_px": 145.98,
+      "aim_error_norm": 0.099403,
+      "on_target": false,
+      "confirmed_count": 2,
+      "baseline_error_px": 142.65,
+      "baseline_count": 5,
+      "baseline_detections": [
+        {
+          "box": [
+            41.56,
+            263.06,
+            352.17,
+            571.1
+          ],
+          "confidence": 0.4314
+        },
+        {
+          "box": [
+            763.07,
+            321.51,
+            833.13,
+            434.22
+          ],
+          "confidence": 0.4063
+        },
+        {
+          "box": [
+            51.68,
+            400.4,
+            357.4,
+            573.02
+          ],
+          "confidence": 0.2262
+        },
+        {
+          "box": [
+            730.9,
+            320.98,
+            832.18,
+            434.49
+          ],
+          "confidence": 0.1766
+        },
+        {
+          "box": [
+            269.28,
+            196.02,
+            330.01,
+            281.54
+          ],
+          "confidence": 0.1418
+        }
+      ],
+      "raw_roi_count": 17,
+      "detector": "i3",
+      "detector_ms": 171.328
+    },
+    {
+      "time": 0.4,
+      "frame": 12,
+      "crosshair": {
+        "x": 636.98,
+        "y": 360.74,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 2,
+          "box": [
+            762.35,
+            317.62,
+            826.34,
+            423.4
+          ],
+          "confidence": 0.4124,
+          "confirmed": true,
+          "aim": [
+            794.34,
+            333.48
+          ],
+          "on_target": false
+        },
+        {
+          "id": 1,
+          "box": [
+            759.06,
+            314.51,
+            848.19,
+            423.62
+          ],
+          "confidence": 0.3387,
+          "confirmed": true,
+          "aim": [
+            803.62,
+            330.88
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": 2,
+      "aim_error_px": 159.7,
+      "aim_error_norm": 0.108745,
+      "on_target": false,
+      "confirmed_count": 2,
+      "baseline_error_px": 155.93,
+      "baseline_count": 4,
+      "baseline_detections": [
+        {
+          "box": [
+            48.43,
+            281.11,
+            399.09,
+            572.29
+          ],
+          "confidence": 0.4401
+        },
+        {
+          "box": [
+            182.22,
+            434.51,
+            397.66,
+            575.14
+          ],
+          "confidence": 0.2157
+        },
+        {
+          "box": [
+            60.22,
+            419.99,
+            395.24,
+            574.51
+          ],
+          "confidence": 0.1478
+        },
+        {
+          "box": [
+            760.97,
+            314.71,
+            830.33,
+            423.96
+          ],
+          "confidence": 0.1295
+        }
+      ],
+      "raw_roi_count": 25,
+      "detector": "i3",
+      "detector_ms": 167.913
+    },
+    {
+      "time": 0.5,
+      "frame": 15,
+      "crosshair": {
+        "x": 636.69,
+        "y": 361.11,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 397.66,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            111.11,
+            377.78,
+            408.16,
+            574.22
+          ],
+          "confidence": 0.255
+        }
+      ],
+      "raw_roi_count": 7,
+      "detector": "i3",
+      "detector_ms": 180.961
+    },
+    {
+      "time": 0.6,
+      "frame": 18,
+      "crosshair": {
+        "x": 636.8,
+        "y": 361.77,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 1,
+          "box": [
+            793.49,
+            320.75,
+            865.54,
+            442.29
+          ],
+          "confidence": 0.2791,
+          "confirmed": false,
+          "aim": [
+            829.51,
+            338.98
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 167.55,
+      "baseline_count": 2,
+      "baseline_detections": [
+        {
+          "box": [
+            789.55,
+            323.98,
+            868.57,
+            444.07
+          ],
+          "confidence": 0.1929
+        },
+        {
+          "box": [
+            742.06,
+            322.94,
+            869.8,
+            443.44
+          ],
+          "confidence": 0.1641
+        }
+      ],
+      "raw_roi_count": 5,
+      "detector": "i3",
+      "detector_ms": 191.97
+    },
+    {
+      "time": 0.7,
+      "frame": 21,
+      "crosshair": {
+        "x": 637.28,
+        "y": 360.44,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 182.921
+    },
+    {
+      "time": 0.8,
+      "frame": 24,
+      "crosshair": {
+        "x": 637.07,
+        "y": 360.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 179.5,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            781.43,
+            328.75,
+            854.13,
+            440.89
+          ],
+          "confidence": 0.2643
+        }
+      ],
+      "raw_roi_count": 10,
+      "detector": "i3",
+      "detector_ms": 181.086
+    },
+    {
+      "time": 0.9,
+      "frame": 27,
+      "crosshair": {
+        "x": 637.07,
+        "y": 360.59,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 3,
+          "box": [
+            757.02,
+            339.43,
+            812.61,
+            453.03
+          ],
+          "confidence": 0.3268,
+          "confirmed": false,
+          "aim": [
+            784.81,
+            356.47
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 9,
+      "detector": "i3",
+      "detector_ms": 180.12
+    },
+    {
+      "time": 1.0,
+      "frame": 30,
+      "crosshair": {
+        "x": 637.0,
+        "y": 360.76,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 4,
+          "box": [
+            901.01,
+            325.01,
+            952.37,
+            418.58
+          ],
+          "confidence": 0.3543,
+          "confirmed": false,
+          "aim": [
+            926.69,
+            339.05
+          ],
+          "on_target": false
+        },
+        {
+          "id": 3,
+          "box": [
+            748.28,
+            350.71,
+            817.41,
+            462.21
+          ],
+          "confidence": 0.2715,
+          "confirmed": false,
+          "aim": [
+            782.85,
+            367.43
+          ],
+          "on_target": false
+        },
+        {
+          "id": 5,
+          "box": [
+            707.43,
+            179.64,
+            730.67,
+            211.46
+          ],
+          "confidence": 0.2695,
+          "confirmed": false,
+          "aim": [
+            719.05,
+            184.41
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 147.62,
+      "baseline_count": 2,
+      "baseline_detections": [
+        {
+          "box": [
+            748.73,
+            334.88,
+            816.07,
+            462.92
+          ],
+          "confidence": 0.5326
+        },
+        {
+          "box": [
+            897.31,
+            326.35,
+            952.29,
+            418.77
+          ],
+          "confidence": 0.4062
+        }
+      ],
+      "raw_roi_count": 21,
+      "detector": "i3",
+      "detector_ms": 204.519
+    },
+    {
+      "time": 1.1,
+      "frame": 33,
+      "crosshair": {
+        "x": 636.9,
+        "y": 361.3,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 72.95,
+      "baseline_count": 2,
+      "baseline_detections": [
+        {
+          "box": [
+            0.67,
+            325.31,
+            295.05,
+            568.21
+          ],
+          "confidence": 0.2654
+        },
+        {
+          "box": [
+            683.83,
+            308.41,
+            740.1,
+            387.69
+          ],
+          "confidence": 0.2485
+        }
+      ],
+      "raw_roi_count": 12,
+      "detector": "i3",
+      "detector_ms": 197.65
+    },
+    {
+      "time": 1.2,
+      "frame": 36,
+      "crosshair": {
+        "x": 637.21,
+        "y": 360.62,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 6,
+          "box": [
+            970.97,
+            320.52,
+            1064.61,
+            433.45
+          ],
+          "confidence": 0.6635,
+          "confirmed": false,
+          "aim": [
+            1017.79,
+            337.46
+          ],
+          "on_target": false
+        },
+        {
+          "id": 7,
+          "box": [
+            604.49,
+            249.82,
+            610.48,
+            262.85
+          ],
+          "confidence": 0.3354,
+          "confirmed": false,
+          "aim": [
+            607.48,
+            251.78
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 380.29,
+      "baseline_count": 2,
+      "baseline_detections": [
+        {
+          "box": [
+            975.5,
+            319.55,
+            1064.31,
+            434.71
+          ],
+          "confidence": 0.5523
+        },
+        {
+          "box": [
+            0.3,
+            287.66,
+            76.72,
+            570.76
+          ],
+          "confidence": 0.1216
+        }
+      ],
+      "raw_roi_count": 13,
+      "detector": "i3",
+      "detector_ms": 183.779
+    },
+    {
+      "time": 1.3,
+      "frame": 39,
+      "crosshair": {
+        "x": 636.5,
+        "y": 361.07,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 6,
+          "box": [
+            1002.74,
+            318.85,
+            1100.48,
+            441.27
+          ],
+          "confidence": 0.5897,
+          "confirmed": false,
+          "aim": [
+            1051.61,
+            337.22
+          ],
+          "on_target": false
+        },
+        {
+          "id": 8,
+          "box": [
+            854.08,
+            314.39,
+            1021.33,
+            479.14
+          ],
+          "confidence": 0.2383,
+          "confirmed": false,
+          "aim": [
+            937.71,
+            339.1
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 308.85,
+      "baseline_count": 5,
+      "baseline_detections": [
+        {
+          "box": [
+            1004.49,
+            318.34,
+            1098.53,
+            441.49
+          ],
+          "confidence": 0.5291
+        },
+        {
+          "box": [
+            922.95,
+            316.64,
+            1019.18,
+            478.04
+          ],
+          "confidence": 0.3063
+        },
+        {
+          "box": [
+            0.2,
+            312.98,
+            186.27,
+            496.49
+          ],
+          "confidence": 0.256
+        },
+        {
+          "box": [
+            872.79,
+            312.56,
+            1020.76,
+            478.91
+          ],
+          "confidence": 0.1934
+        },
+        {
+          "box": [
+            0.08,
+            313.09,
+            206.06,
+            568.49
+          ],
+          "confidence": 0.1327
+        }
+      ],
+      "raw_roi_count": 20,
+      "detector": "i3",
+      "detector_ms": 191.349
+    },
+    {
+      "time": 1.4,
+      "frame": 42,
+      "crosshair": {
+        "x": 638.17,
+        "y": 360.83,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 187.728
+    },
+    {
+      "time": 1.5,
+      "frame": 45,
+      "crosshair": {
+        "x": 637.42,
+        "y": 361.74,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 230.012
+    },
+    {
+      "time": 1.6,
+      "frame": 48,
+      "crosshair": {
+        "x": 638.33,
+        "y": 360.33,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 216.741
+    },
+    {
+      "time": 1.7,
+      "frame": 51,
+      "crosshair": {
+        "x": 637.67,
+        "y": 361.17,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 530.07,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            72.68,
+            327.66,
+            147.36,
+            411.26
+          ],
+          "confidence": 0.3142
+        }
+      ],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 208.066
+    },
+    {
+      "time": 1.8,
+      "frame": 54,
+      "crosshair": {
+        "x": 638.5,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 211.3
+    },
+    {
+      "time": 1.9,
+      "frame": 57,
+      "crosshair": {
+        "x": 638.5,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 478.6,
+      "baseline_count": 2,
+      "baseline_detections": [
+        {
+          "box": [
+            25.67,
+            294.08,
+            307.96,
+            569.47
+          ],
+          "confidence": 0.287
+        },
+        {
+          "box": [
+            75.91,
+            299.91,
+            143.12,
+            416.55
+          ],
+          "confidence": 0.1417
+        }
+      ],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 199.531
+    },
+    {
+      "time": 2.0,
+      "frame": 60,
+      "crosshair": {
+        "x": 638.5,
+        "y": 360.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 462.61,
+      "baseline_count": 2,
+      "baseline_detections": [
+        {
+          "box": [
+            137.47,
+            430.08,
+            262.17,
+            574.5
+          ],
+          "confidence": 0.5393
+        },
+        {
+          "box": [
+            1123.93,
+            369.28,
+            1278.31,
+            572.56
+          ],
+          "confidence": 0.1226
+        }
+      ],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 197.26
+    },
+    {
+      "time": 2.1,
+      "frame": 63,
+      "crosshair": {
+        "x": 638.5,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 575.57,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            28.15,
+            298.83,
+            100.72,
+            418.02
+          ],
+          "confidence": 0.1211
+        }
+      ],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 199.823
+    },
+    {
+      "time": 2.2,
+      "frame": 66,
+      "crosshair": {
+        "x": 638.5,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 205.298
+    },
+    {
+      "time": 2.3,
+      "frame": 69,
+      "crosshair": {
+        "x": 638.5,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 403.84,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            204.68,
+            304.33,
+            267.65,
+            412.63
+          ],
+          "confidence": 0.1768
+        }
+      ],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 195.062
+    },
+    {
+      "time": 2.4,
+      "frame": 72,
+      "crosshair": {
+        "x": 638.5,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 438.28,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            169.91,
+            303.33,
+            233.54,
+            415.71
+          ],
+          "confidence": 0.6873
+        }
+      ],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 197.681
+    },
+    {
+      "time": 2.5,
+      "frame": 75,
+      "crosshair": {
+        "x": 637.57,
+        "y": 361.36,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 5,
+      "detector": "i3",
+      "detector_ms": 290.645
+    },
+    {
+      "time": 2.6,
+      "frame": 78,
+      "crosshair": {
+        "x": 637.75,
+        "y": 361.0,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 202.669
+    },
+    {
+      "time": 2.7,
+      "frame": 81,
+      "crosshair": {
+        "x": 637.68,
+        "y": 361.0,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 9,
+          "box": [
+            630.25,
+            356.49,
+            645.14,
+            384.46
+          ],
+          "confidence": 0.3093,
+          "confirmed": false,
+          "aim": [
+            637.7,
+            360.69
+          ],
+          "on_target": true
+        },
+        {
+          "id": 10,
+          "box": [
+            674.13,
+            375.76,
+            691.43,
+            402.65
+          ],
+          "confidence": 0.2643,
+          "confirmed": false,
+          "aim": [
+            682.78,
+            379.79
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 9,
+      "detector": "i3",
+      "detector_ms": 199.96
+    },
+    {
+      "time": 2.8,
+      "frame": 84,
+      "crosshair": {
+        "x": 638.0,
+        "y": 360.5,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 11,
+          "box": [
+            669.53,
+            338.35,
+            708.74,
+            406.12
+          ],
+          "confidence": 0.2355,
+          "confirmed": false,
+          "aim": [
+            689.13,
+            348.52
+          ],
+          "on_target": false
+        },
+        {
+          "id": 10,
+          "box": [
+            685.47,
+            377.64,
+            701.63,
+            405.85
+          ],
+          "confidence": 0.2629,
+          "confirmed": false,
+          "aim": [
+            693.55,
+            381.87
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 10,
+      "detector": "i3",
+      "detector_ms": 178.233
+    },
+    {
+      "time": 2.9,
+      "frame": 87,
+      "crosshair": {
+        "x": 638.0,
+        "y": 360.5,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 11,
+          "box": [
+            657.1,
+            336.91,
+            698.45,
+            407.55
+          ],
+          "confidence": 0.6185,
+          "confirmed": false,
+          "aim": [
+            677.78,
+            347.5
+          ],
+          "on_target": false
+        },
+        {
+          "id": 10,
+          "box": [
+            673.54,
+            377.8,
+            688.76,
+            406.76
+          ],
+          "confidence": 0.7885,
+          "confirmed": true,
+          "aim": [
+            681.15,
+            382.14
+          ],
+          "on_target": false
+        },
+        {
+          "id": 9,
+          "box": [
+            644.93,
+            373.04,
+            656.19,
+            386.05
+          ],
+          "confidence": 0.3266,
+          "confirmed": false,
+          "aim": [
+            650.56,
+            374.99
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": 10,
+      "aim_error_px": 48.27,
+      "aim_error_norm": 0.032869,
+      "on_target": false,
+      "confirmed_count": 1,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 10,
+      "detector": "i3",
+      "detector_ms": 172.239
+    },
+    {
+      "time": 3.0,
+      "frame": 90,
+      "crosshair": {
+        "x": 637.5,
+        "y": 360.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 173.381
+    },
+    {
+      "time": 3.1,
+      "frame": 93,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 172.421
+    },
+    {
+      "time": 3.2,
+      "frame": 96,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 167.283
+    },
+    {
+      "time": 3.3,
+      "frame": 99,
+      "crosshair": {
+        "x": 638.0,
+        "y": 360.45,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 12,
+          "box": [
+            645.53,
+            336.88,
+            687.91,
+            408.86
+          ],
+          "confidence": 0.5031,
+          "confirmed": false,
+          "aim": [
+            666.72,
+            347.67
+          ],
+          "on_target": false
+        },
+        {
+          "id": 13,
+          "box": [
+            664.78,
+            378.62,
+            680.36,
+            407.68
+          ],
+          "confidence": 0.3764,
+          "confirmed": false,
+          "aim": [
+            672.57,
+            382.97
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 21.6,
+      "baseline_count": 2,
+      "baseline_detections": [
+        {
+          "box": [
+            637.81,
+            336.31,
+            691.88,
+            409.42
+          ],
+          "confidence": 0.3677
+        },
+        {
+          "box": [
+            633.16,
+            355.38,
+            663.73,
+            404.38
+          ],
+          "confidence": 0.1319
+        }
+      ],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 169.668
+    },
+    {
+      "time": 3.4,
+      "frame": 102,
+      "crosshair": {
+        "x": 637.69,
+        "y": 360.77,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 12,
+          "box": [
+            637.86,
+            337.14,
+            681.44,
+            409.67
+          ],
+          "confidence": 0.262,
+          "confirmed": false,
+          "aim": [
+            659.65,
+            348.02
+          ],
+          "on_target": false
+        },
+        {
+          "id": 13,
+          "box": [
+            654.78,
+            379.96,
+            671.17,
+            409.54
+          ],
+          "confidence": 0.2516,
+          "confirmed": false,
+          "aim": [
+            662.97,
+            384.4
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 23.89,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            633.97,
+            336.53,
+            685.55,
+            410.32
+          ],
+          "confidence": 0.3
+        }
+      ],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 165.518
+    },
+    {
+      "time": 3.5,
+      "frame": 105,
+      "crosshair": {
+        "x": 638.67,
+        "y": 358.33,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 41.3,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            655.31,
+            337.5,
+            701.28,
+            413.41
+          ],
+          "confidence": 0.4381
+        }
+      ],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 163.969
+    },
+    {
+      "time": 3.6,
+      "frame": 108,
+      "crosshair": {
+        "x": 638.67,
+        "y": 358.33,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 12,
+          "box": [
+            647.94,
+            342.43,
+            698.21,
+            417.15
+          ],
+          "confidence": 0.304,
+          "confirmed": false,
+          "aim": [
+            673.07,
+            353.64
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 37.85,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            648.95,
+            341.17,
+            696.65,
+            416.62
+          ],
+          "confidence": 0.4332
+        }
+      ],
+      "raw_roi_count": 7,
+      "detector": "i3",
+      "detector_ms": 168.21
+    },
+    {
+      "time": 3.7,
+      "frame": 111,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 185.734
+    },
+    {
+      "time": 3.8,
+      "frame": 114,
+      "crosshair": {
+        "x": 640.2,
+        "y": 360.8,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 5,
+      "detector": "i3",
+      "detector_ms": 188.303
+    },
+    {
+      "time": 3.9,
+      "frame": 117,
+      "crosshair": {
+        "x": 638.75,
+        "y": 360.62,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 14,
+          "box": [
+            268.57,
+            89.44,
+            481.74,
+            390.61
+          ],
+          "confidence": 0.4051,
+          "confirmed": false,
+          "aim": [
+            375.16,
+            134.61
+          ],
+          "on_target": false
+        },
+        {
+          "id": 15,
+          "box": [
+            546.76,
+            88.96,
+            676.32,
+            387.53
+          ],
+          "confidence": 0.2966,
+          "confirmed": false,
+          "aim": [
+            611.54,
+            133.75
+          ],
+          "on_target": true
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 104.38,
+      "baseline_count": 3,
+      "baseline_detections": [
+        {
+          "box": [
+            544.28,
+            62.28,
+            678.36,
+            457.0
+          ],
+          "confidence": 0.402
+        },
+        {
+          "box": [
+            875.88,
+            231.61,
+            990.65,
+            350.34
+          ],
+          "confidence": 0.1752
+        },
+        {
+          "box": [
+            876.96,
+            232.28,
+            957.92,
+            349.53
+          ],
+          "confidence": 0.1343
+        }
+      ],
+      "raw_roi_count": 8,
+      "detector": "i3",
+      "detector_ms": 199.408
+    },
+    {
+      "time": 4.0,
+      "frame": 120,
+      "crosshair": {
+        "x": 637.5,
+        "y": 361.57,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 465.48,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            1.02,
+            275.59,
+            356.85,
+            572.4
+          ],
+          "confidence": 0.1873
+        }
+      ],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 203.556
+    },
+    {
+      "time": 4.1,
+      "frame": 123,
+      "crosshair": {
+        "x": 637.82,
+        "y": 361.91,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 16,
+          "box": [
+            671.45,
+            359.72,
+            723.32,
+            432.69
+          ],
+          "confidence": 0.2411,
+          "confirmed": false,
+          "aim": [
+            697.39,
+            370.66
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 391.37,
+      "baseline_count": 2,
+      "baseline_detections": [
+        {
+          "box": [
+            1058.36,
+            74.67,
+            1278.11,
+            573.67
+          ],
+          "confidence": 0.4153
+        },
+        {
+          "box": [
+            106.82,
+            255.17,
+            397.68,
+            571.08
+          ],
+          "confidence": 0.2316
+        }
+      ],
+      "raw_roi_count": 7,
+      "detector": "i3",
+      "detector_ms": 205.179
+    },
+    {
+      "time": 4.2,
+      "frame": 126,
+      "crosshair": {
+        "x": 639.5,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 16,
+          "box": [
+            669.49,
+            351.85,
+            716.13,
+            428.49
+          ],
+          "confidence": 0.2485,
+          "confirmed": false,
+          "aim": [
+            692.81,
+            363.34
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 207.401
+    },
+    {
+      "time": 4.3,
+      "frame": 129,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 363.29,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            898.04,
+            78.7,
+            1064.54,
+            392.32
+          ],
+          "confidence": 0.2058
+        }
+      ],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 220.185
+    },
+    {
+      "time": 4.4,
+      "frame": 132,
+      "crosshair": {
+        "x": 637.33,
+        "y": 362.52,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 467.61,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            937.42,
+            80.32,
+            1275.3,
+            571.41
+          ],
+          "confidence": 0.2559
+        }
+      ],
+      "raw_roi_count": 9,
+      "detector": "i3",
+      "detector_ms": 237.499
+    },
+    {
+      "time": 4.5,
+      "frame": 135,
+      "crosshair": {
+        "x": 641.43,
+        "y": 362.57,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 215.66
+    },
+    {
+      "time": 4.6,
+      "frame": 138,
+      "crosshair": {
+        "x": 639.61,
+        "y": 360.48,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 190.52,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            436.65,
+            63.97,
+            605.22,
+            358.57
+          ],
+          "confidence": 0.2186
+        }
+      ],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 204.073
+    },
+    {
+      "time": 4.7,
+      "frame": 141,
+      "crosshair": {
+        "x": 636.67,
+        "y": 360.33,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 200.36
+    },
+    {
+      "time": 4.8,
+      "frame": 144,
+      "crosshair": {
+        "x": 637.5,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 258.98,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            353.4,
+            313.67,
+            408.9,
+            422.96
+          ],
+          "confidence": 0.3676
+        }
+      ],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 206.565
+    },
+    {
+      "time": 4.9,
+      "frame": 147,
+      "crosshair": {
+        "x": 638.5,
+        "y": 358.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 280.2,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            332.36,
+            315.04,
+            387.95,
+            433.24
+          ],
+          "confidence": 0.1468
+        }
+      ],
+      "raw_roi_count": 5,
+      "detector": "i3",
+      "detector_ms": 209.416
+    },
+    {
+      "time": 5.0,
+      "frame": 150,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 225.217
+    },
+    {
+      "time": 5.1,
+      "frame": 153,
+      "crosshair": {
+        "x": 637.41,
+        "y": 360.85,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 13,
+      "detector": "i3",
+      "detector_ms": 184.905
+    },
+    {
+      "time": 5.2,
+      "frame": 156,
+      "crosshair": {
+        "x": 637.59,
+        "y": 360.74,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 8,
+      "detector": "i3",
+      "detector_ms": 163.859
+    },
+    {
+      "time": 5.3,
+      "frame": 159,
+      "crosshair": {
+        "x": 638.12,
+        "y": 359.88,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 163.569
+    },
+    {
+      "time": 5.4,
+      "frame": 162,
+      "crosshair": {
+        "x": 637.2,
+        "y": 361.7,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 5,
+      "detector": "i3",
+      "detector_ms": 165.604
+    },
+    {
+      "time": 5.5,
+      "frame": 165,
+      "crosshair": {
+        "x": 637.0,
+        "y": 361.44,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 186.2,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            794.72,
+            331.1,
+            855.36,
+            430.44
+          ],
+          "confidence": 0.2321
+        }
+      ],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 162.734
+    },
+    {
+      "time": 5.6,
+      "frame": 168,
+      "crosshair": {
+        "x": 639.0,
+        "y": 358.5,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 17,
+          "box": [
+            270.27,
+            230.92,
+            285.63,
+            252.21
+          ],
+          "confidence": 0.2642,
+          "confirmed": false,
+          "aim": [
+            277.95,
+            234.12
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 599.61,
+      "baseline_count": 2,
+      "baseline_detections": [
+        {
+          "box": [
+            0.19,
+            431.67,
+            90.89,
+            558.17
+          ],
+          "confidence": 0.4657
+        },
+        {
+          "box": [
+            0.15,
+            325.91,
+            91.89,
+            558.04
+          ],
+          "confidence": 0.2937
+        }
+      ],
+      "raw_roi_count": 6,
+      "detector": "i3",
+      "detector_ms": 164.167
+    },
+    {
+      "time": 5.7,
+      "frame": 171,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 185.57,
+      "baseline_count": 3,
+      "baseline_detections": [
+        {
+          "box": [
+            794.94,
+            336.19,
+            853.04,
+            432.16
+          ],
+          "confidence": 0.5114
+        },
+        {
+          "box": [
+            41.79,
+            334.61,
+            231.79,
+            569.37
+          ],
+          "confidence": 0.3094
+        },
+        {
+          "box": [
+            43.11,
+            337.07,
+            160.23,
+            569.53
+          ],
+          "confidence": 0.2426
+        }
+      ],
+      "raw_roi_count": 11,
+      "detector": "i3",
+      "detector_ms": 171.035
+    },
+    {
+      "time": 5.8,
+      "frame": 174,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [
+        {
+          "id": 18,
+          "box": [
+            816.53,
+            368.39,
+            867.76,
+            429.83
+          ],
+          "confidence": 0.7725,
+          "confirmed": false,
+          "aim": [
+            842.15,
+            377.61
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 205.27,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            815.07,
+            365.91,
+            868.5,
+            429.42
+          ],
+          "confidence": 0.7174
+        }
+      ],
+      "raw_roi_count": 8,
+      "detector": "i3",
+      "detector_ms": 171.519
+    },
+    {
+      "time": 5.9,
+      "frame": 177,
+      "crosshair": {
+        "x": 638.5,
+        "y": 359.5,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 18,
+          "box": [
+            821.46,
+            366.37,
+            868.35,
+            430.5
+          ],
+          "confidence": 0.6758,
+          "confirmed": false,
+          "aim": [
+            844.9,
+            375.99
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 208.97,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            821.52,
+            369.15,
+            868.82,
+            430.21
+          ],
+          "confidence": 0.7091
+        }
+      ],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 168.016
+    },
+    {
+      "time": 6.0,
+      "frame": 180,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 167.891
+    },
+    {
+      "time": 6.1,
+      "frame": 183,
+      "crosshair": {
+        "x": 637.59,
+        "y": 361.35,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 19,
+          "box": [
+            632.56,
+            347.44,
+            679.32,
+            419.61
+          ],
+          "confidence": 0.526,
+          "confirmed": false,
+          "aim": [
+            655.94,
+            358.27
+          ],
+          "on_target": true
+        },
+        {
+          "id": 20,
+          "box": [
+            400.55,
+            418.73,
+            413.13,
+            433.36
+          ],
+          "confidence": 0.2421,
+          "confirmed": false,
+          "aim": [
+            406.84,
+            420.93
+          ],
+          "on_target": false
+        },
+        {
+          "id": 21,
+          "box": [
+            368.49,
+            421.65,
+            385.2,
+            434.89
+          ],
+          "confidence": 0.2313,
+          "confirmed": false,
+          "aim": [
+            376.84,
+            423.63
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 28.87,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            633.05,
+            346.7,
+            679.51,
+            420.99
+          ],
+          "confidence": 0.1575
+        }
+      ],
+      "raw_roi_count": 16,
+      "detector": "i3",
+      "detector_ms": 164.785
+    },
+    {
+      "time": 6.2,
+      "frame": 186,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 503.11,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            0.07,
+            276.64,
+            281.79,
+            570.59
+          ],
+          "confidence": 0.1408
+        }
+      ],
+      "raw_roi_count": 7,
+      "detector": "i3",
+      "detector_ms": 180.821
+    },
+    {
+      "time": 6.3,
+      "frame": 189,
+      "crosshair": {
+        "x": 637.2,
+        "y": 360.9,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 19,
+          "box": [
+            602.42,
+            337.75,
+            654.15,
+            419.93
+          ],
+          "confidence": 0.2284,
+          "confirmed": false,
+          "aim": [
+            628.28,
+            350.08
+          ],
+          "on_target": true
+        },
+        {
+          "id": 22,
+          "box": [
+            757.07,
+            342.37,
+            781.84,
+            371.44
+          ],
+          "confidence": 0.3433,
+          "confirmed": false,
+          "aim": [
+            769.45,
+            346.73
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 22.72,
+      "baseline_count": 4,
+      "baseline_detections": [
+        {
+          "box": [
+            602.94,
+            338.13,
+            654.22,
+            421.16
+          ],
+          "confidence": 0.2985
+        },
+        {
+          "box": [
+            269.31,
+            190.09,
+            332.25,
+            305.64
+          ],
+          "confidence": 0.198
+        },
+        {
+          "box": [
+            107.34,
+            392.8,
+            303.73,
+            572.6
+          ],
+          "confidence": 0.1591
+        },
+        {
+          "box": [
+            105.9,
+            427.74,
+            365.43,
+            572.98
+          ],
+          "confidence": 0.129
+        }
+      ],
+      "raw_roi_count": 15,
+      "detector": "i3",
+      "detector_ms": 162.329
+    },
+    {
+      "time": 6.4,
+      "frame": 192,
+      "crosshair": {
+        "x": 636.67,
+        "y": 361.44,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 41.02,
+      "baseline_count": 2,
+      "baseline_detections": [
+        {
+          "box": [
+            101.38,
+            298.4,
+            414.03,
+            572.02
+          ],
+          "confidence": 0.3963
+        },
+        {
+          "box": [
+            575.47,
+            334.31,
+            629.57,
+            419.01
+          ],
+          "confidence": 0.2738
+        }
+      ],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 177.806
+    },
+    {
+      "time": 6.5,
+      "frame": 195,
+      "crosshair": {
+        "x": 637.5,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 352.07,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            286.8,
+            516.6,
+            395.1,
+            574.99
+          ],
+          "confidence": 0.1604
+        }
+      ],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 169.927
+    },
+    {
+      "time": 6.6,
+      "frame": 198,
+      "crosshair": {
+        "x": 637.5,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 391.56,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            984.8,
+            185.63,
+            1056.82,
+            352.1
+          ],
+          "confidence": 0.2987
+        }
+      ],
+      "raw_roi_count": 12,
+      "detector": "i3",
+      "detector_ms": 195.664
+    },
+    {
+      "time": 6.7,
+      "frame": 201,
+      "crosshair": {
+        "x": 636.84,
+        "y": 361.67,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 11,
+      "detector": "i3",
+      "detector_ms": 248.966
+    },
+    {
+      "time": 6.8,
+      "frame": 204,
+      "crosshair": {
+        "x": 637.57,
+        "y": 362.38,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 9,
+      "detector": "i3",
+      "detector_ms": 211.627
+    },
+    {
+      "time": 6.9,
+      "frame": 207,
+      "crosshair": {
+        "x": 637.21,
+        "y": 360.93,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 8,
+      "detector": "i3",
+      "detector_ms": 197.918
+    },
+    {
+      "time": 7.0,
+      "frame": 210,
+      "crosshair": {
+        "x": 637.21,
+        "y": 360.93,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 23,
+          "box": [
+            664.08,
+            363.74,
+            673.62,
+            382.05
+          ],
+          "confidence": 0.2344,
+          "confirmed": false,
+          "aim": [
+            668.85,
+            366.48
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 10,
+      "detector": "i3",
+      "detector_ms": 207.695
+    },
+    {
+      "time": 7.1,
+      "frame": 213,
+      "crosshair": {
+        "x": 637.3,
+        "y": 360.63,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 7,
+      "detector": "i3",
+      "detector_ms": 206.579
+    },
+    {
+      "time": 7.2,
+      "frame": 216,
+      "crosshair": {
+        "x": 637.83,
+        "y": 359.83,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 7,
+      "detector": "i3",
+      "detector_ms": 209.471
+    },
+    {
+      "time": 7.3,
+      "frame": 219,
+      "crosshair": {
+        "x": 637.41,
+        "y": 360.82,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 226.685
+    },
+    {
+      "time": 7.4,
+      "frame": 222,
+      "crosshair": {
+        "x": 639.3,
+        "y": 360.9,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 211.548
+    },
+    {
+      "time": 7.5,
+      "frame": 225,
+      "crosshair": {
+        "x": 638.5,
+        "y": 361.0,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 48.63,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            567.25,
+            346.81,
+            627.56,
+            420.12
+          ],
+          "confidence": 0.1204
+        }
+      ],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 213.298
+    },
+    {
+      "time": 7.6,
+      "frame": 228,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 235.231
+    },
+    {
+      "time": 7.7,
+      "frame": 231,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 237.119
+    },
+    {
+      "time": 7.8,
+      "frame": 234,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 213.031
+    },
+    {
+      "time": 7.9,
+      "frame": 237,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 206.797
+    },
+    {
+      "time": 8.0,
+      "frame": 240,
+      "crosshair": {
+        "x": 641.83,
+        "y": 360.33,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 210.059
+    },
+    {
+      "time": 8.1,
+      "frame": 243,
+      "crosshair": {
+        "x": 639.0,
+        "y": 358.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 215.319
+    },
+    {
+      "time": 8.2,
+      "frame": 246,
+      "crosshair": {
+        "x": 639.0,
+        "y": 358.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 236.23
+    },
+    {
+      "time": 8.3,
+      "frame": 249,
+      "crosshair": {
+        "x": 637.81,
+        "y": 360.52,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 15,
+      "detector": "i3",
+      "detector_ms": 216.289
+    },
+    {
+      "time": 8.4,
+      "frame": 252,
+      "crosshair": {
+        "x": 638.03,
+        "y": 361.75,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 213.791
+    },
+    {
+      "time": 8.5,
+      "frame": 255,
+      "crosshair": {
+        "x": 636.63,
+        "y": 360.98,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 206.472
+    },
+    {
+      "time": 8.6,
+      "frame": 258,
+      "crosshair": {
+        "x": 633.59,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 211.3
+    },
+    {
+      "time": 8.7,
+      "frame": 261,
+      "crosshair": {
+        "x": 636.5,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 196.595
+    },
+    {
+      "time": 8.8,
+      "frame": 264,
+      "crosshair": {
+        "x": 636.4,
+        "y": 361.2,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 196.144
+    },
+    {
+      "time": 8.9,
+      "frame": 267,
+      "crosshair": {
+        "x": 640.5,
+        "y": 360.0,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 126.52,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            477.87,
+            306.52,
+            550.13,
+            436.49
+          ],
+          "confidence": 0.2841
+        }
+      ],
+      "raw_roi_count": 6,
+      "detector": "i3",
+      "detector_ms": 196.869
+    },
+    {
+      "time": 9.0,
+      "frame": 270,
+      "crosshair": {
+        "x": 637.5,
+        "y": 360.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 5,
+      "detector": "i3",
+      "detector_ms": 197.786
+    },
+    {
+      "time": 9.1,
+      "frame": 273,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 199.245
+    },
+    {
+      "time": 9.2,
+      "frame": 276,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 144.32,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            556.48,
+            58.62,
+            756.94,
+            374.67
+          ],
+          "confidence": 0.2036
+        }
+      ],
+      "raw_roi_count": 7,
+      "detector": "i3",
+      "detector_ms": 199.958
+    },
+    {
+      "time": 9.3,
+      "frame": 279,
+      "crosshair": {
+        "x": 637.5,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 198.762
+    },
+    {
+      "time": 9.4,
+      "frame": 282,
+      "crosshair": {
+        "x": 638.5,
+        "y": 360.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 198.529
+    },
+    {
+      "time": 9.5,
+      "frame": 285,
+      "crosshair": {
+        "x": 637.84,
+        "y": 360.21,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 206.377
+    },
+    {
+      "time": 9.6,
+      "frame": 288,
+      "crosshair": {
+        "x": 639.0,
+        "y": 359.17,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 199.695
+    },
+    {
+      "time": 9.7,
+      "frame": 291,
+      "crosshair": {
+        "x": 638.0,
+        "y": 359.7,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 231.522
+    },
+    {
+      "time": 9.8,
+      "frame": 294,
+      "crosshair": {
+        "x": 637.83,
+        "y": 361.33,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 225.721
+    },
+    {
+      "time": 9.9,
+      "frame": 297,
+      "crosshair": {
+        "x": 637.5,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 291.868
+    },
+    {
+      "time": 10.0,
+      "frame": 300,
+      "crosshair": {
+        "x": 637.95,
+        "y": 360.82,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 24,
+          "box": [
+            1032.21,
+            399.17,
+            1053.89,
+            428.35
+          ],
+          "confidence": 0.2642,
+          "confirmed": false,
+          "aim": [
+            1043.05,
+            403.55
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 198.642
+    },
+    {
+      "time": 10.1,
+      "frame": 303,
+      "crosshair": {
+        "x": 637.96,
+        "y": 360.76,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 25,
+          "box": [
+            565.95,
+            355.61,
+            584.76,
+            381.08
+          ],
+          "confidence": 0.8425,
+          "confirmed": false,
+          "aim": [
+            575.36,
+            359.43
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 199.572
+    },
+    {
+      "time": 10.2,
+      "frame": 306,
+      "crosshair": {
+        "x": 638.05,
+        "y": 360.19,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 25,
+          "box": [
+            560.17,
+            359.73,
+            577.42,
+            395.79
+          ],
+          "confidence": 0.6619,
+          "confirmed": false,
+          "aim": [
+            568.8,
+            365.14
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 204.269
+    },
+    {
+      "time": 10.3,
+      "frame": 309,
+      "crosshair": {
+        "x": 638.15,
+        "y": 360.92,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 382.85,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            232.26,
+            505.53,
+            372.05,
+            574.67
+          ],
+          "confidence": 0.1482
+        }
+      ],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 231.898
+    },
+    {
+      "time": 10.4,
+      "frame": 312,
+      "crosshair": {
+        "x": 637.33,
+        "y": 361.17,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 470.93,
+      "baseline_count": 2,
+      "baseline_detections": [
+        {
+          "box": [
+            0.69,
+            275.68,
+            291.39,
+            570.46
+          ],
+          "confidence": 0.4223
+        },
+        {
+          "box": [
+            40.02,
+            423.72,
+            339.52,
+            572.46
+          ],
+          "confidence": 0.2418
+        }
+      ],
+      "raw_roi_count": 14,
+      "detector": "i3",
+      "detector_ms": 198.903
+    },
+    {
+      "time": 10.5,
+      "frame": 315,
+      "crosshair": {
+        "x": 637.17,
+        "y": 361.83,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 399.81,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            109.54,
+            324.84,
+            390.74,
+            572.46
+          ],
+          "confidence": 0.2624
+        }
+      ],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 238.842
+    },
+    {
+      "time": 10.6,
+      "frame": 318,
+      "crosshair": {
+        "x": 637.57,
+        "y": 361.36,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 26,
+          "box": [
+            563.3,
+            338.14,
+            623.5,
+            443.51
+          ],
+          "confidence": 0.432,
+          "confirmed": false,
+          "aim": [
+            593.4,
+            353.95
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 56.06,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            562.28,
+            338.43,
+            623.41,
+            442.22
+          ],
+          "confidence": 0.566
+        }
+      ],
+      "raw_roi_count": 9,
+      "detector": "i3",
+      "detector_ms": 233.157
+    },
+    {
+      "time": 10.7,
+      "frame": 321,
+      "crosshair": {
+        "x": 635.83,
+        "y": 361.17,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 200.041
+    },
+    {
+      "time": 10.8,
+      "frame": 324,
+      "crosshair": {
+        "x": 636.9,
+        "y": 361.3,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 73.35,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            549.61,
+            341.15,
+            597.53,
+            441.02
+          ],
+          "confidence": 0.314
+        }
+      ],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 203.018
+    },
+    {
+      "time": 10.9,
+      "frame": 327,
+      "crosshair": {
+        "x": 637.7,
+        "y": 359.7,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 27,
+          "box": [
+            527.38,
+            337.11,
+            581.65,
+            438.61
+          ],
+          "confidence": 0.3765,
+          "confirmed": false,
+          "aim": [
+            554.52,
+            352.34
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 90.96,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            528.17,
+            337.56,
+            578.99,
+            439.19
+          ],
+          "confidence": 0.3084
+        }
+      ],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 245.945
+    },
+    {
+      "time": 11.0,
+      "frame": 330,
+      "crosshair": {
+        "x": 638.5,
+        "y": 360.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 252.976
+    },
+    {
+      "time": 11.1,
+      "frame": 333,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 216.015
+    },
+    {
+      "time": 11.2,
+      "frame": 336,
+      "crosshair": {
+        "x": 637.5,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 224.415
+    },
+    {
+      "time": 11.3,
+      "frame": 339,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 223.185
+    },
+    {
+      "time": 11.4,
+      "frame": 342,
+      "crosshair": {
+        "x": 637.71,
+        "y": 360.43,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 556.8,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            0.34,
+            274.98,
+            173.11,
+            570.22
+          ],
+          "confidence": 0.3332
+        }
+      ],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 203.538
+    },
+    {
+      "time": 11.5,
+      "frame": 345,
+      "crosshair": {
+        "x": 637.53,
+        "y": 360.53,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 5,
+      "detector": "i3",
+      "detector_ms": 171.909
+    },
+    {
+      "time": 11.6,
+      "frame": 348,
+      "crosshair": {
+        "x": 638.77,
+        "y": 360.47,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 12,
+      "detector": "i3",
+      "detector_ms": 175.168
+    },
+    {
+      "time": 11.7,
+      "frame": 351,
+      "crosshair": {
+        "x": 637.71,
+        "y": 361.06,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 241.378
+    },
+    {
+      "time": 11.8,
+      "frame": 354,
+      "crosshair": {
+        "x": 637.36,
+        "y": 361.36,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 247.137
+    },
+    {
+      "time": 11.9,
+      "frame": 357,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 166.205
+    },
+    {
+      "time": 12.0,
+      "frame": 360,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 165.901
+    },
+    {
+      "time": 12.1,
+      "frame": 363,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 167.682
+    },
+    {
+      "time": 12.2,
+      "frame": 366,
+      "crosshair": {
+        "x": 637.2,
+        "y": 360.9,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 449.82,
+      "baseline_count": 2,
+      "baseline_detections": [
+        {
+          "box": [
+            25.2,
+            291.05,
+            286.75,
+            569.2
+          ],
+          "confidence": 0.3164
+        },
+        {
+          "box": [
+            102.19,
+            292.44,
+            289.46,
+            569.71
+          ],
+          "confidence": 0.2214
+        }
+      ],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 171.383
+    },
+    {
+      "time": 12.3,
+      "frame": 369,
+      "crosshair": {
+        "x": 637.29,
+        "y": 360.43,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 425.17,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            78.44,
+            350.52,
+            375.04,
+            569.37
+          ],
+          "confidence": 0.1235
+        }
+      ],
+      "raw_roi_count": 5,
+      "detector": "i3",
+      "detector_ms": 169.901
+    },
+    {
+      "time": 12.4,
+      "frame": 372,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 495.14,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            0.93,
+            291.78,
+            299.05,
+            570.41
+          ],
+          "confidence": 0.2681
+        }
+      ],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 171.534
+    },
+    {
+      "time": 12.5,
+      "frame": 375,
+      "crosshair": {
+        "x": 638.5,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 346.83,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            276.99,
+            53.43,
+            412.62,
+            302.44
+          ],
+          "confidence": 0.196
+        }
+      ],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 168.575
+    },
+    {
+      "time": 12.6,
+      "frame": 378,
+      "crosshair": {
+        "x": 637.36,
+        "y": 361.36,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 5,
+      "detector": "i3",
+      "detector_ms": 164.292
+    },
+    {
+      "time": 12.7,
+      "frame": 381,
+      "crosshair": {
+        "x": 637.36,
+        "y": 361.36,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 180.324
+    },
+    {
+      "time": 12.8,
+      "frame": 384,
+      "crosshair": {
+        "x": 637.38,
+        "y": 361.81,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 170.759
+    },
+    {
+      "time": 12.9,
+      "frame": 387,
+      "crosshair": {
+        "x": 637.69,
+        "y": 361.23,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 168.9
+    },
+    {
+      "time": 13.0,
+      "frame": 390,
+      "crosshair": {
+        "x": 637.5,
+        "y": 360.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 235.479
+    },
+    {
+      "time": 13.1,
+      "frame": 393,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 6,
+      "detector": "i3",
+      "detector_ms": 177.02
+    },
+    {
+      "time": 13.2,
+      "frame": 396,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 172.115
+    },
+    {
+      "time": 13.3,
+      "frame": 399,
+      "crosshair": {
+        "x": 637.3,
+        "y": 358.8,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 164.353
+    },
+    {
+      "time": 13.4,
+      "frame": 402,
+      "crosshair": {
+        "x": 636.33,
+        "y": 360.33,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 164.506
+    },
+    {
+      "time": 13.5,
+      "frame": 405,
+      "crosshair": {
+        "x": 637.5,
+        "y": 360.9,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 8,
+      "detector": "i3",
+      "detector_ms": 167.304
+    },
+    {
+      "time": 13.6,
+      "frame": 408,
+      "crosshair": {
+        "x": 638.0,
+        "y": 360.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 8,
+      "detector": "i3",
+      "detector_ms": 167.971
+    },
+    {
+      "time": 13.7,
+      "frame": 411,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.5,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 28,
+          "box": [
+            655.37,
+            363.82,
+            681.17,
+            395.44
+          ],
+          "confidence": 0.9497,
+          "confirmed": false,
+          "aim": [
+            668.27,
+            368.57
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 6,
+      "detector": "i3",
+      "detector_ms": 170.278
+    },
+    {
+      "time": 13.8,
+      "frame": 414,
+      "crosshair": {
+        "x": 639.93,
+        "y": 361.36,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 28,
+          "box": [
+            653.39,
+            365.63,
+            674.1,
+            393.96
+          ],
+          "confidence": 1.0,
+          "confirmed": false,
+          "aim": [
+            663.75,
+            369.88
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 18,
+      "detector": "i3",
+      "detector_ms": 169.35
+    },
+    {
+      "time": 13.9,
+      "frame": 417,
+      "crosshair": {
+        "x": 638.15,
+        "y": 361.88,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 170.09
+    },
+    {
+      "time": 14.0,
+      "frame": 420,
+      "crosshair": {
+        "x": 639.11,
+        "y": 361.8,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 29,
+          "box": [
+            694.13,
+            348.42,
+            710.25,
+            384.15
+          ],
+          "confidence": 0.7247,
+          "confirmed": false,
+          "aim": [
+            702.19,
+            353.78
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 476.03,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            1.18,
+            274.95,
+            335.17,
+            571.39
+          ],
+          "confidence": 0.371
+        }
+      ],
+      "raw_roi_count": 14,
+      "detector": "i3",
+      "detector_ms": 201.325
+    },
+    {
+      "time": 14.1,
+      "frame": 423,
+      "crosshair": {
+        "x": 637.54,
+        "y": 361.69,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 29,
+          "box": [
+            682.9,
+            344.24,
+            702.72,
+            380.04
+          ],
+          "confidence": 0.7347,
+          "confirmed": false,
+          "aim": [
+            692.81,
+            349.61
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 48.68,
+      "baseline_count": 3,
+      "baseline_detections": [
+        {
+          "box": [
+            684.14,
+            344.09,
+            702.54,
+            380.13
+          ],
+          "confidence": 0.4918
+        },
+        {
+          "box": [
+            86.81,
+            414.04,
+            375.27,
+            573.14
+          ],
+          "confidence": 0.2591
+        },
+        {
+          "box": [
+            682.17,
+            345.66,
+            695.05,
+            379.57
+          ],
+          "confidence": 0.1289
+        }
+      ],
+      "raw_roi_count": 16,
+      "detector": "i3",
+      "detector_ms": 170.925
+    },
+    {
+      "time": 14.2,
+      "frame": 426,
+      "crosshair": {
+        "x": 637.47,
+        "y": 361.47,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 164.688
+    },
+    {
+      "time": 14.3,
+      "frame": 429,
+      "crosshair": {
+        "x": 638.0,
+        "y": 362.35,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 164.025
+    },
+    {
+      "time": 14.4,
+      "frame": 432,
+      "crosshair": {
+        "x": 638.56,
+        "y": 362.0,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 30,
+          "box": [
+            1108.97,
+            233.23,
+            1117.11,
+            244.13
+          ],
+          "confidence": 0.2534,
+          "confirmed": false,
+          "aim": [
+            1113.04,
+            234.86
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 20,
+      "detector": "i3",
+      "detector_ms": 164.253
+    },
+    {
+      "time": 14.5,
+      "frame": 435,
+      "crosshair": {
+        "x": 637.91,
+        "y": 361.95,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 9,
+      "detector": "i3",
+      "detector_ms": 163.73
+    },
+    {
+      "time": 14.6,
+      "frame": 438,
+      "crosshair": {
+        "x": 637.74,
+        "y": 360.79,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 162.97
+    },
+    {
+      "time": 14.7,
+      "frame": 441,
+      "crosshair": {
+        "x": 637.81,
+        "y": 361.19,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 164.462
+    },
+    {
+      "time": 14.8,
+      "frame": 444,
+      "crosshair": {
+        "x": 637.83,
+        "y": 360.89,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 31,
+          "box": [
+            660.62,
+            351.67,
+            685.02,
+            392.1
+          ],
+          "confidence": 0.2613,
+          "confirmed": false,
+          "aim": [
+            672.82,
+            357.73
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 164.797
+    },
+    {
+      "time": 14.9,
+      "frame": 447,
+      "crosshair": {
+        "x": 637.5,
+        "y": 358.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 5,
+      "detector": "i3",
+      "detector_ms": 175.552
+    },
+    {
+      "time": 15.0,
+      "frame": 450,
+      "crosshair": {
+        "x": 638.5,
+        "y": 360.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 169.394
+    },
+    {
+      "time": 15.1,
+      "frame": 453,
+      "crosshair": {
+        "x": 638.0,
+        "y": 361.0,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 351.25,
+      "baseline_count": 3,
+      "baseline_detections": [
+        {
+          "box": [
+            118.33,
+            409.22,
+            376.25,
+            573.4
+          ],
+          "confidence": 0.3945
+        },
+        {
+          "box": [
+            272.89,
+            80.63,
+            352.43,
+            286.32
+          ],
+          "confidence": 0.3383
+        },
+        {
+          "box": [
+            266.46,
+            78.57,
+            354.21,
+            398.95
+          ],
+          "confidence": 0.2786
+        }
+      ],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 164.787
+    },
+    {
+      "time": 15.2,
+      "frame": 456,
+      "crosshair": {
+        "x": 638.0,
+        "y": 361.0,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 5,
+      "detector": "i3",
+      "detector_ms": 164.247
+    },
+    {
+      "time": 15.3,
+      "frame": 459,
+      "crosshair": {
+        "x": 638.25,
+        "y": 361.17,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 376.85,
+      "baseline_count": 3,
+      "baseline_detections": [
+        {
+          "box": [
+            270.96,
+            60.8,
+            361.73,
+            273.12
+          ],
+          "confidence": 0.5364
+        },
+        {
+          "box": [
+            126.56,
+            428.69,
+            335.36,
+            573.87
+          ],
+          "confidence": 0.471
+        },
+        {
+          "box": [
+            0.33,
+            268.58,
+            358.72,
+            571.95
+          ],
+          "confidence": 0.1382
+        }
+      ],
+      "raw_roi_count": 9,
+      "detector": "i3",
+      "detector_ms": 164.531
+    },
+    {
+      "time": 15.4,
+      "frame": 462,
+      "crosshair": {
+        "x": 638.5,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 364.86,
+      "baseline_count": 2,
+      "baseline_detections": [
+        {
+          "box": [
+            142.28,
+            249.54,
+            415.02,
+            571.45
+          ],
+          "confidence": 0.2572
+        },
+        {
+          "box": [
+            147.29,
+            429.15,
+            422.8,
+            573.35
+          ],
+          "confidence": 0.1771
+        }
+      ],
+      "raw_roi_count": 7,
+      "detector": "i3",
+      "detector_ms": 165.553
+    },
+    {
+      "time": 15.5,
+      "frame": 465,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 164.757
+    },
+    {
+      "time": 15.6,
+      "frame": 468,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 165.003
+    },
+    {
+      "time": 15.7,
+      "frame": 471,
+      "crosshair": {
+        "x": 637.8,
+        "y": 360.1,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 165.238
+    },
+    {
+      "time": 15.8,
+      "frame": 474,
+      "crosshair": {
+        "x": 637.77,
+        "y": 361.18,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 163.176
+    },
+    {
+      "time": 15.9,
+      "frame": 477,
+      "crosshair": {
+        "x": 637.83,
+        "y": 361.83,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 173.424
+    },
+    {
+      "time": 16.0,
+      "frame": 480,
+      "crosshair": {
+        "x": 637.33,
+        "y": 361.17,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 169.095
+    },
+    {
+      "time": 16.1,
+      "frame": 483,
+      "crosshair": {
+        "x": 638.91,
+        "y": 361.05,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 162.874
+    },
+    {
+      "time": 16.2,
+      "frame": 486,
+      "crosshair": {
+        "x": 638.82,
+        "y": 360.61,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 7,
+      "detector": "i3",
+      "detector_ms": 173.659
+    },
+    {
+      "time": 16.3,
+      "frame": 489,
+      "crosshair": {
+        "x": 639.1,
+        "y": 361.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 163.743
+    },
+    {
+      "time": 16.4,
+      "frame": 492,
+      "crosshair": {
+        "x": 637.88,
+        "y": 361.24,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 162.868
+    },
+    {
+      "time": 16.5,
+      "frame": 495,
+      "crosshair": {
+        "x": 637.71,
+        "y": 361.71,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 163.127
+    },
+    {
+      "time": 16.6,
+      "frame": 498,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 171.204
+    },
+    {
+      "time": 16.7,
+      "frame": 501,
+      "crosshair": {
+        "x": 633.5,
+        "y": 360.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 169.112
+    },
+    {
+      "time": 16.8,
+      "frame": 504,
+      "crosshair": {
+        "x": 633.83,
+        "y": 359.83,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 32,
+          "box": [
+            1102.01,
+            167.17,
+            1129.02,
+            198.81
+          ],
+          "confidence": 0.312,
+          "confirmed": false,
+          "aim": [
+            1115.52,
+            171.91
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 6,
+      "detector": "i3",
+      "detector_ms": 164.347
+    },
+    {
+      "time": 16.9,
+      "frame": 507,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 475.31,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            991.53,
+            103.78,
+            1141.32,
+            196.29
+          ],
+          "confidence": 0.1616
+        }
+      ],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 164.456
+    },
+    {
+      "time": 17.0,
+      "frame": 510,
+      "crosshair": {
+        "x": 638.05,
+        "y": 360.65,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 6,
+      "detector": "i3",
+      "detector_ms": 165.156
+    },
+    {
+      "time": 17.1,
+      "frame": 513,
+      "crosshair": {
+        "x": 637.89,
+        "y": 360.78,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 163.421
+    },
+    {
+      "time": 17.2,
+      "frame": 516,
+      "crosshair": {
+        "x": 638.11,
+        "y": 360.79,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 163.574
+    },
+    {
+      "time": 17.3,
+      "frame": 519,
+      "crosshair": {
+        "x": 637.89,
+        "y": 360.78,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 165.395
+    },
+    {
+      "time": 17.4,
+      "frame": 522,
+      "crosshair": {
+        "x": 637.74,
+        "y": 360.74,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 163.161
+    },
+    {
+      "time": 17.5,
+      "frame": 525,
+      "crosshair": {
+        "x": 637.95,
+        "y": 360.68,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 164.247
+    },
+    {
+      "time": 17.6,
+      "frame": 528,
+      "crosshair": {
+        "x": 638.17,
+        "y": 360.7,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 164.494
+    },
+    {
+      "time": 17.7,
+      "frame": 531,
+      "crosshair": {
+        "x": 638.17,
+        "y": 360.7,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 168.449
+    },
+    {
+      "time": 17.8,
+      "frame": 534,
+      "crosshair": {
+        "x": 638.17,
+        "y": 360.7,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 164.924
+    },
+    {
+      "time": 17.9,
+      "frame": 537,
+      "crosshair": {
+        "x": 638.17,
+        "y": 360.7,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 163.809
+    },
+    {
+      "time": 18.0,
+      "frame": 540,
+      "crosshair": {
+        "x": 638.21,
+        "y": 360.67,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 163.194
+    },
+    {
+      "time": 18.1,
+      "frame": 543,
+      "crosshair": {
+        "x": 638.21,
+        "y": 360.67,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 162.842
+    },
+    {
+      "time": 18.2,
+      "frame": 546,
+      "crosshair": {
+        "x": 638.17,
+        "y": 360.7,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 162.255
+    },
+    {
+      "time": 18.3,
+      "frame": 549,
+      "crosshair": {
+        "x": 638.21,
+        "y": 360.67,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 163.184
+    },
+    {
+      "time": 18.4,
+      "frame": 552,
+      "crosshair": {
+        "x": 638.21,
+        "y": 360.67,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 163.13
+    },
+    {
+      "time": 18.5,
+      "frame": 555,
+      "crosshair": {
+        "x": 638.21,
+        "y": 360.67,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 162.391
+    },
+    {
+      "time": 18.6,
+      "frame": 558,
+      "crosshair": {
+        "x": 638.21,
+        "y": 360.67,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 162.504
+    },
+    {
+      "time": 18.7,
+      "frame": 561,
+      "crosshair": {
+        "x": 638.08,
+        "y": 360.62,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 165.8
+    },
+    {
+      "time": 18.8,
+      "frame": 564,
+      "crosshair": {
+        "x": 638.08,
+        "y": 360.62,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 169.862
+    },
+    {
+      "time": 18.9,
+      "frame": 567,
+      "crosshair": {
+        "x": 638.08,
+        "y": 360.62,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 162.313
+    },
+    {
+      "time": 19.0,
+      "frame": 570,
+      "crosshair": {
+        "x": 638.08,
+        "y": 360.62,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 162.491
+    },
+    {
+      "time": 19.1,
+      "frame": 573,
+      "crosshair": {
+        "x": 637.45,
+        "y": 360.64,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 162.737
+    },
+    {
+      "time": 19.2,
+      "frame": 576,
+      "crosshair": {
+        "x": 638.0,
+        "y": 360.64,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 162.629
+    },
+    {
+      "time": 19.3,
+      "frame": 579,
+      "crosshair": {
+        "x": 638.08,
+        "y": 360.62,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 163.535
+    },
+    {
+      "time": 19.4,
+      "frame": 582,
+      "crosshair": {
+        "x": 637.92,
+        "y": 360.64,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 166.391
+    },
+    {
+      "time": 19.5,
+      "frame": 585,
+      "crosshair": {
+        "x": 637.92,
+        "y": 360.64,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 164.492
+    },
+    {
+      "time": 19.6,
+      "frame": 588,
+      "crosshair": {
+        "x": 637.92,
+        "y": 360.64,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 165.635
+    },
+    {
+      "time": 19.7,
+      "frame": 591,
+      "crosshair": {
+        "x": 637.92,
+        "y": 360.64,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 167.668
+    },
+    {
+      "time": 19.8,
+      "frame": 594,
+      "crosshair": {
+        "x": 637.92,
+        "y": 360.64,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 167.69
+    },
+    {
+      "time": 19.9,
+      "frame": 597,
+      "crosshair": {
+        "x": 637.92,
+        "y": 360.64,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 165.064
+    },
+    {
+      "time": 20.0,
+      "frame": 600,
+      "crosshair": {
+        "x": 638.26,
+        "y": 360.59,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 166.705
+    },
+    {
+      "time": 20.1,
+      "frame": 603,
+      "crosshair": {
+        "x": 637.76,
+        "y": 359.21,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 166.207
+    },
+    {
+      "time": 20.2,
+      "frame": 606,
+      "crosshair": {
+        "x": 637.33,
+        "y": 361.67,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 163.301
+    },
+    {
+      "time": 20.3,
+      "frame": 609,
+      "crosshair": {
+        "x": 638.55,
+        "y": 358.55,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 462.0,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            1.2,
+            269.78,
+            362.74,
+            571.15
+          ],
+          "confidence": 0.6613
+        }
+      ],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 167.051
+    },
+    {
+      "time": 20.4,
+      "frame": 612,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 392.34,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            94.27,
+            212.52,
+            403.75,
+            572.35
+          ],
+          "confidence": 0.6554
+        }
+      ],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 163.712
+    },
+    {
+      "time": 20.5,
+      "frame": 615,
+      "crosshair": {
+        "x": 637.83,
+        "y": 361.17,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 399.91,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            84.65,
+            307.57,
+            411.77,
+            572.76
+          ],
+          "confidence": 0.7163
+        }
+      ],
+      "raw_roi_count": 6,
+      "detector": "i3",
+      "detector_ms": 164.468
+    },
+    {
+      "time": 20.6,
+      "frame": 618,
+      "crosshair": {
+        "x": 638.5,
+        "y": 358.5,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 365.72,
+      "baseline_count": 3,
+      "baseline_detections": [
+        {
+          "box": [
+            122.97,
+            417.88,
+            405.92,
+            573.87
+          ],
+          "confidence": 0.2996
+        },
+        {
+          "box": [
+            121.94,
+            490.94,
+            241.48,
+            575.76
+          ],
+          "confidence": 0.1312
+        },
+        {
+          "box": [
+            268.08,
+            516.0,
+            381.83,
+            575.46
+          ],
+          "confidence": 0.1231
+        }
+      ],
+      "raw_roi_count": 5,
+      "detector": "i3",
+      "detector_ms": 168.825
+    },
+    {
+      "time": 20.7,
+      "frame": 621,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 6,
+      "detector": "i3",
+      "detector_ms": 163.592
+    },
+    {
+      "time": 20.8,
+      "frame": 624,
+      "crosshair": {
+        "x": 636.5,
+        "y": 360.5,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 33,
+          "box": [
+            1097.14,
+            100.52,
+            1196.54,
+            187.83
+          ],
+          "confidence": 0.4393,
+          "confirmed": false,
+          "aim": [
+            1146.84,
+            113.61
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 5,
+      "detector": "i3",
+      "detector_ms": 165.28
+    },
+    {
+      "time": 20.9,
+      "frame": 627,
+      "crosshair": {
+        "x": 637.0,
+        "y": 361.12,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 169.141
+    },
+    {
+      "time": 21.0,
+      "frame": 630,
+      "crosshair": {
+        "x": 637.21,
+        "y": 361.05,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 164.478
+    },
+    {
+      "time": 21.1,
+      "frame": 633,
+      "crosshair": {
+        "x": 636.89,
+        "y": 361.0,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 180.6,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            444.46,
+            378.0,
+            558.7,
+            573.99
+          ],
+          "confidence": 0.1894
+        }
+      ],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 163.646
+    },
+    {
+      "time": 21.2,
+      "frame": 636,
+      "crosshair": {
+        "x": 638.05,
+        "y": 360.62,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 192.7,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            429.69,
+            372.45,
+            538.1,
+            573.51
+          ],
+          "confidence": 0.2801
+        }
+      ],
+      "raw_roi_count": 8,
+      "detector": "i3",
+      "detector_ms": 164.416
+    },
+    {
+      "time": 21.3,
+      "frame": 639,
+      "crosshair": {
+        "x": 637.33,
+        "y": 358.33,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 164.654
+    },
+    {
+      "time": 21.4,
+      "frame": 642,
+      "crosshair": {
+        "x": 637.0,
+        "y": 360.67,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 163.219
+    },
+    {
+      "time": 21.5,
+      "frame": 645,
+      "crosshair": {
+        "x": 636.73,
+        "y": 360.73,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 5,
+      "detector": "i3",
+      "detector_ms": 164.126
+    },
+    {
+      "time": 21.6,
+      "frame": 648,
+      "crosshair": {
+        "x": 636.73,
+        "y": 360.73,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 6,
+      "detector": "i3",
+      "detector_ms": 175.001
+    },
+    {
+      "time": 21.7,
+      "frame": 651,
+      "crosshair": {
+        "x": 637.67,
+        "y": 361.17,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 169.277
+    },
+    {
+      "time": 21.8,
+      "frame": 654,
+      "crosshair": {
+        "x": 638.06,
+        "y": 360.89,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 177.717
+    },
+    {
+      "time": 21.9,
+      "frame": 657,
+      "crosshair": {
+        "x": 636.75,
+        "y": 361.75,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 168.734
+    },
+    {
+      "time": 22.0,
+      "frame": 660,
+      "crosshair": {
+        "x": 637.55,
+        "y": 360.68,
+        "source": "hsv"
+      },
+      "detections": [
+        {
+          "id": 34,
+          "box": [
+            989.32,
+            504.7,
+            1033.95,
+            551.06
+          ],
+          "confidence": 0.2694,
+          "confirmed": false,
+          "aim": [
+            1011.64,
+            511.65
+          ],
+          "on_target": false
+        }
+      ],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 7,
+      "detector": "i3",
+      "detector_ms": 163.329
+    },
+    {
+      "time": 22.1,
+      "frame": 663,
+      "crosshair": {
+        "x": 637.62,
+        "y": 360.57,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 167.711
+    },
+    {
+      "time": 22.2,
+      "frame": 666,
+      "crosshair": {
+        "x": 637.47,
+        "y": 361.18,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 3,
+      "detector": "i3",
+      "detector_ms": 166.245
+    },
+    {
+      "time": 22.3,
+      "frame": 669,
+      "crosshair": {
+        "x": 637.67,
+        "y": 361.0,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 164.678
+    },
+    {
+      "time": 22.4,
+      "frame": 672,
+      "crosshair": {
+        "x": 637.6,
+        "y": 360.92,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 170.879
+    },
+    {
+      "time": 22.5,
+      "frame": 675,
+      "crosshair": {
+        "x": 637.71,
+        "y": 361.06,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 180.096
+    },
+    {
+      "time": 22.6,
+      "frame": 678,
+      "crosshair": {
+        "x": 637.57,
+        "y": 361.36,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 168.522
+    },
+    {
+      "time": 22.7,
+      "frame": 681,
+      "crosshair": {
+        "x": 639.28,
+        "y": 361.52,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 339.7,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            693.55,
+            51.15,
+            1258.64,
+            570.1
+          ],
+          "confidence": 0.2944
+        }
+      ],
+      "raw_roi_count": 5,
+      "detector": "i3",
+      "detector_ms": 176.373
+    },
+    {
+      "time": 22.8,
+      "frame": 684,
+      "crosshair": {
+        "x": 637.5,
+        "y": 359.83,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 165.084
+    },
+    {
+      "time": 22.9,
+      "frame": 687,
+      "crosshair": {
+        "x": 637.63,
+        "y": 361.26,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 167.139
+    },
+    {
+      "time": 23.0,
+      "frame": 690,
+      "crosshair": {
+        "x": 637.43,
+        "y": 361.36,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 1,
+      "detector": "i3",
+      "detector_ms": 167.138
+    },
+    {
+      "time": 23.1,
+      "frame": 693,
+      "crosshair": {
+        "x": 638.32,
+        "y": 360.68,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 165.113
+    },
+    {
+      "time": 23.2,
+      "frame": 696,
+      "crosshair": {
+        "x": 638.32,
+        "y": 360.68,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 175.494
+    },
+    {
+      "time": 23.3,
+      "frame": 699,
+      "crosshair": {
+        "x": 636.88,
+        "y": 360.75,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 2,
+      "detector": "i3",
+      "detector_ms": 163.654
+    },
+    {
+      "time": 23.4,
+      "frame": 702,
+      "crosshair": {
+        "x": 636.88,
+        "y": 360.75,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 164.676
+    },
+    {
+      "time": 23.5,
+      "frame": 705,
+      "crosshair": {
+        "x": 636.94,
+        "y": 360.71,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 166.115
+    },
+    {
+      "time": 23.6,
+      "frame": 708,
+      "crosshair": {
+        "x": 637.08,
+        "y": 361.12,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 163.014
+    },
+    {
+      "time": 23.7,
+      "frame": 711,
+      "crosshair": {
+        "x": 637.2,
+        "y": 362.2,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": null,
+      "baseline_count": 0,
+      "baseline_detections": [],
+      "raw_roi_count": 0,
+      "detector": "i3",
+      "detector_ms": 165.266
+    },
+    {
+      "time": 23.8,
+      "frame": 714,
+      "crosshair": {
+        "x": 638.33,
+        "y": 360.33,
+        "source": "hsv"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 417.33,
+      "baseline_count": 1,
+      "baseline_detections": [
+        {
+          "box": [
+            61.86,
+            342.12,
+            406.25,
+            571.53
+          ],
+          "confidence": 0.1254
+        }
+      ],
+      "raw_roi_count": 10,
+      "detector": "i3",
+      "detector_ms": 179.658
+    },
+    {
+      "time": 23.9,
+      "frame": 717,
+      "crosshair": {
+        "x": 640.0,
+        "y": 360.0,
+        "source": "center_fallback"
+      },
+      "detections": [],
+      "selected_id": null,
+      "aim_error_px": null,
+      "aim_error_norm": null,
+      "on_target": false,
+      "confirmed_count": 0,
+      "baseline_error_px": 383.28,
+      "baseline_count": 2,
+      "baseline_detections": [
+        {
+          "box": [
+            0.0,
+            261.99,
+            384.89,
+            572.44
+          ],
+          "confidence": 0.2773
+        },
+        {
+          "box": [
+            136.43,
+            251.15,
+            383.78,
+            570.56
+          ],
+          "confidence": 0.189
+        }
+      ],
+      "raw_roi_count": 4,
+      "detector": "i3",
+      "detector_ms": 169.291
+    }
+  ],
+  "summary": {
+    "mean_error_px": 124.98,
+    "alignment_pct": 0.0,
+    "median_acquisition_ms": null,
+    "confirmed_tracks": 3,
+    "detected_frames": 39,
+    "total_frames": 240,
+    "confirmed_frames": 4,
+    "duration": 24.0,
+    "processing_seconds": 65.1,
+    "detector_median_ms": 170.819,
+    "total_detections": 58,
+    "fps": 30.0,
+    "analysis_fps": 10.0,
+    "width": 1280,
+    "height": 720,
+    "crosshair_fallback_frames": 30,
+    "acquired_encounters": 0,
+    "already_aligned_encounters": 0
+  },
+  "encounters": [
+    {
+      "id": 1,
+      "segment": 1,
+      "start": 0.0,
+      "end": 0.4,
+      "acquisition_ms": null,
+      "initial_error_px": 145.56,
+      "already_aligned": false,
+      "observations": 5,
+      "confidence": 0.5378,
+      "censored_reason": "unobserved_gap"
+    },
+    {
+      "id": 2,
+      "segment": 1,
+      "start": 0.0,
+      "end": 0.4,
+      "acquisition_ms": null,
+      "initial_error_px": 161.48,
+      "already_aligned": false,
+      "observations": 5,
+      "confidence": 0.4124,
+      "censored_reason": "unobserved_gap"
+    },
+    {
+      "id": 10,
+      "segment": 1,
+      "start": 2.7,
+      "end": 2.9,
+      "acquisition_ms": null,
+      "initial_error_px": 48.86,
+      "already_aligned": false,
+      "observations": 3,
+      "confidence": 0.7885,
+      "censored_reason": "unobserved_gap"
+    }
+  ],
+  "feedback": [
+    "Of 240 sampled frames, 39 contain filtered character candidates and 4 contain continuously confirmed targets.",
+    "For confirmed targets, mean distance to the upper-box anchor is 125.0 pixels. Review the annotated footage for vertical and horizontal aim offsets.",
+    "In frames with confirmed targets, the crosshair lies inside at least one target box in 0.0% of frames. This measures overlap, not bullet hits.",
+    "No eligible continuously observed events were acquired after onset. Median acquisition delay remains null.",
+    "Green crosshair localization failed in 30 / 240 sampled frames; screen center was used. Check each frame source field."
+  ],
+  "limitations": [
+    "The generic COCO person detector identifies character candidates, without distinguishing enemies, teammates, bodies, or weapon false positives. It has not been fine-tuned on CS2.",
+    "The sample is spectator footage with x-ray. The algorithm may detect occluded outlines that the player cannot see. Detection onset does not establish enemy visibility.",
+    "The anchor is fixed at 15% down the box, a geometric approximation rather than head detection. Box alignment is not hit accuracy.",
+    "Acquisition delay is a proxy from first continuous detection to crosshair entry, not human reaction time. Missing frames, missed detections, or tracking gaps end the event.",
+    "HSV searches only for small green components near screen center. Failure falls back to center and records the source. Other colors, resolutions, and spectator layouts may require calibration.",
+    "ROI and hand filters use a layout preset for this recording and may discard edge or occluded characters. Different HUD layouts require recalibration.",
+    "Shots, damage, kills, and game state are not detected. No accuracy evaluation against manual ground truth is available.",
+    "Timestamps use frame index and container-average FPS. Constant-frame-rate input is recommended; variable-frame-rate recordings may introduce timing error.",
+    "Iteration scores use the development-selected small-box and tile-agreement rules. They are ranking scores; false positives increased on separate replay recordings."
+  ],
+  "methodology": {
+    "detector": "yolo11n.pt / class 0 person; local weights (COCO-compatible class mapping required)",
+    "roi": [
+      256,
+      86,
+      1280,
+      605
+    ],
+    "crosshair": "Center-localized green HSV component, center fallback flagged",
+    "tracking": "Greedy IoU/distance association; 3 consecutive sampled observations to confirm; gap closes acquisition episode",
+    "anchor": "bbox top + 0.15 * height (geometric proxy, not anatomical head)",
+    "alignment_denominator": "Frames with at least one currently confirmed track",
+    "acquisition_denominator": "Confirmed uninterrupted encounters that began unaligned and later aligned",
+    "timestamp_resolution_ms": 100.0
+  },
+  "artifacts": {
+    "recording": "recording.mp4",
+    "annotated": "annotated.mp4",
+    "analysis": "analysis.json",
+    "frame_metrics": "frame_metrics.csv",
+    "encounters": "encounters.csv",
+    "experiment": "experiment.json",
+    "preview": "preview.jpg"
+  }
+}

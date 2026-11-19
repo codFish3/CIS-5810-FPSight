@@ -17,6 +17,8 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, unquote, urlsplit
 
+from detector_profiles import DETECTOR_PROFILES, resolve_detector_options
+
 ROOT = Path(__file__).resolve().parent
 MAX_UPLOAD_BYTES = 500 * 1024 * 1024
 ALLOWED_EXTENSIONS = {".mp4", ".mov", ".mkv", ".avi"}
@@ -29,6 +31,7 @@ DEFAULT_OPTIONS = {
     "tracking": True,
     "hud": True,
     "imgsz": 1280,
+    "detector": "proposal",
 }
 
 
@@ -82,7 +85,11 @@ def parse_options(query: dict[str, list[str]]) -> dict:
         if not 320 <= value <= 1280 or value % 32:
             raise ValueError("imgsz must be a multiple of 32 between 320 and 1280.")
         options["imgsz"] = value
-    return options
+    if "detector" in query:
+        options["detector"] = query["detector"][0]
+    if "conf" not in query:
+        options.pop("conf")
+    return resolve_detector_options(options)
 
 
 def rewrite_artifact_urls(result: dict, run_dir: Path, job_id: str) -> dict:
@@ -317,6 +324,7 @@ class FPSightHandler(BaseHTTPRequestHandler):
             return self.json_response(
                 {
                     "ready": True,
+                    "detectors": DETECTOR_PROFILES,
                     "model_available": model_available,
                     "analyzer_available": analyzer_available,
                     "analysis_ready": model_available
@@ -327,11 +335,18 @@ class FPSightHandler(BaseHTTPRequestHandler):
                 }
             )
         if path == "/api/sample":
-            sample = ROOT / "data" / "sample" / "analysis.json"
+            query = parse_qs(split.query, keep_blank_values=True)
+            detector = query.get("detector", ["proposal"])[0]
+            if detector not in DETECTOR_PROFILES:
+                return self.error_response("Unknown demo detector.", 400)
+            sample_dir = ROOT / "data" / "demos" / detector
+            if detector == "proposal" and not (sample_dir / "analysis.json").is_file():
+                sample_dir = ROOT / "data" / "sample"
+            sample = sample_dir / "analysis.json"
             try:
-                return self.json_response(
-                    json.loads(sample.read_text(encoding="utf-8"))
-                )
+                result = json.loads(sample.read_text(encoding="utf-8"))
+                result["sample_prefix"] = "/" + sample_dir.relative_to(ROOT).as_posix() + "/"
+                return self.json_response(result)
             except FileNotFoundError:
                 return self.error_response(
                     "The sample analysis is not available yet.", 404
@@ -358,6 +373,9 @@ class FPSightHandler(BaseHTTPRequestHandler):
         elif url_path.startswith("/web/"):
             base = ROOT / "web"
             candidate = base / url_path.removeprefix("/web/")
+        elif url_path.startswith("/data/demos/"):
+            base = ROOT / "data" / "demos"
+            candidate = base / url_path.removeprefix("/data/demos/")
         elif url_path.startswith("/data/sample/"):
             base = ROOT / "data" / "sample"
             candidate = base / url_path.removeprefix("/data/sample/")

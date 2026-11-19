@@ -9,9 +9,7 @@ export YOLO_CONFIG_DIR="$PWD/.runtime/yolo"
 mkdir -p "$MPLCONFIGDIR" "$YOLO_CONFIG_DIR/Ultralytics"
 
 task_python=""
-for task_candidate in \
-  "$PWD/.venv/bin/python" \
-  "/Users/codfish/Desktop/CIS 5810/final_proj/FPSight_demo/fpsight/bin/python"; do
+for task_candidate in "$PWD/.venv/bin/python"; do
   if [[ -x "$task_candidate" ]]; then
     task_python="$task_candidate"
     break

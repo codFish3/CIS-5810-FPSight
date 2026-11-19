@@ -4,6 +4,7 @@ import argparse
 from pathlib import Path
 
 from .analysis import analyze_video
+from detector_profiles import DETECTOR_PROFILES
 
 
 def main():
@@ -12,7 +13,8 @@ def main():
     parser.add_argument("video", type=Path)
     parser.add_argument("--output", type=Path, default=root / "data" / "analysis")
     parser.add_argument("--model", type=Path, default=root / "models" / "yolo11n.pt")
-    parser.add_argument("--conf", type=float, default=0.12)
+    parser.add_argument("--detector", choices=DETECTOR_PROFILES, default="proposal")
+    parser.add_argument("--conf", type=float, help="Override the selected detector threshold")
     parser.add_argument("--sample-fps", type=float, default=10.0)
     parser.add_argument("--max-seconds", type=float, default=24.0)
     parser.add_argument("--imgsz", type=int, default=1280)
@@ -25,7 +27,8 @@ def main():
         args.output,
         args.model,
         {
-            "conf": args.conf,
+            **({"conf": args.conf} if args.conf is not None else {}),
+            "detector": args.detector,
             "sample_fps": args.sample_fps,
             "max_seconds": args.max_seconds,
             "imgsz": args.imgsz,

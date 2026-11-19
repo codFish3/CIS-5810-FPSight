@@ -1,0 +1,633 @@
+{
+  "source": "../../../FPSight_demo/twistzz.mp4",
+  "source_sha256": "3d7c2b7a31377e8773da5f84ad02d27bbb554b018faef14ada2906adc7ca1235",
+  "dimensions": [
+    1280,
+    720
+  ],
+  "target": "Visibly rendered live in-game character, either team; box visible body pixels only.",
+  "annotation_method": "Single-pass visual boxing by Codex before viewing predictions; coordinates estimated from enlarged frame crops. Human review pending.",
+  "split_method": "Temporal blocks from one round; development f007\u2013f032, test f000\u2013f003 and f034\u2013f054. Skip guard f004\u2013f006 and f033 and post-game player camera f055\u2013f067.",
+  "frames": [
+    {
+      "id": "f000",
+      "image": "frames/f000.jpg",
+      "split": "test",
+      "time_seconds": 0.24483,
+      "source_frame": 14,
+      "boxes": [
+        [
+          737,
+          324,
+          773,
+          416
+        ],
+        [
+          765,
+          322,
+          829,
+          430
+        ]
+      ]
+    },
+    {
+      "id": "f001",
+      "image": "frames/f001.jpg",
+      "split": "test",
+      "time_seconds": 0.75196,
+      "source_frame": 43,
+      "boxes": [
+        [
+          811,
+          338,
+          870,
+          439
+        ],
+        [
+          876,
+          335,
+          931,
+          423
+        ]
+      ]
+    },
+    {
+      "id": "f002",
+      "image": "frames/f002.jpg",
+      "split": "test",
+      "time_seconds": 1.24162,
+      "source_frame": 71,
+      "boxes": [
+        [
+          907,
+          328,
+          985,
+          466
+        ],
+        [
+          988,
+          320,
+          1075,
+          433
+        ]
+      ]
+    },
+    {
+      "id": "f003",
+      "image": "frames/f003.jpg",
+      "split": "test",
+      "time_seconds": 1.74875,
+      "source_frame": 100,
+      "boxes": []
+    },
+    {
+      "id": "f007",
+      "image": "frames/f007.jpg",
+      "split": "dev",
+      "time_seconds": 3.74233,
+      "source_frame": 214,
+      "boxes": [
+        [
+          647,
+          353,
+          663,
+          414
+        ]
+      ],
+      "note": "Visible dark edge beside crate; x-ray-only pixels excluded."
+    },
+    {
+      "id": "f008",
+      "image": "frames/f008.jpg",
+      "split": "dev",
+      "time_seconds": 4.24947,
+      "source_frame": 243,
+      "boxes": [
+        [
+          680,
+          0,
+          1280,
+          720
+        ]
+      ],
+      "note": "Heavily motion-blurred foreground torso of a passing character; bounding box clipped at the frame borders."
+    },
+    {
+      "id": "f009",
+      "image": "frames/f009.jpg",
+      "split": "dev",
+      "time_seconds": 4.75661,
+      "source_frame": 272,
+      "boxes": []
+    },
+    {
+      "id": "f010",
+      "image": "frames/f010.jpg",
+      "split": "dev",
+      "time_seconds": 5.24626,
+      "source_frame": 300,
+      "boxes": []
+    },
+    {
+      "id": "f011",
+      "image": "frames/f011.jpg",
+      "split": "dev",
+      "time_seconds": 5.7534,
+      "source_frame": 329,
+      "boxes": [
+        [
+          78,
+          336,
+          262,
+          565
+        ],
+        [
+          810,
+          368,
+          862,
+          422
+        ]
+      ]
+    },
+    {
+      "id": "f012",
+      "image": "frames/f012.jpg",
+      "split": "dev",
+      "time_seconds": 6.24305,
+      "source_frame": 357,
+      "boxes": [
+        [
+          45,
+          330,
+          83,
+          349
+        ]
+      ],
+      "note": "Only the top of the head is discernible above the first-person weapon."
+    },
+    {
+      "id": "f013",
+      "image": "frames/f013.jpg",
+      "split": "dev",
+      "time_seconds": 6.75019,
+      "source_frame": 386,
+      "boxes": [
+        [
+          629,
+          363,
+          643,
+          380
+        ],
+        [
+          651,
+          353,
+          671,
+          379
+        ]
+      ]
+    },
+    {
+      "id": "f014",
+      "image": "frames/f014.jpg",
+      "split": "dev",
+      "time_seconds": 7.25733,
+      "source_frame": 415,
+      "boxes": [],
+      "note": "Distant highlight blends into background; no separable visible body labeled."
+    },
+    {
+      "id": "f015",
+      "image": "frames/f015.jpg",
+      "split": "dev",
+      "time_seconds": 7.74698,
+      "source_frame": 443,
+      "boxes": [],
+      "note": "Highlights across crate faces or in a dark seam; no separable visible body labeled."
+    },
+    {
+      "id": "f016",
+      "image": "frames/f016.jpg",
+      "split": "dev",
+      "time_seconds": 8.25412,
+      "source_frame": 472,
+      "boxes": []
+    },
+    {
+      "id": "f017",
+      "image": "frames/f017.jpg",
+      "split": "dev",
+      "time_seconds": 8.74377,
+      "source_frame": 500,
+      "boxes": []
+    },
+    {
+      "id": "f018",
+      "image": "frames/f018.jpg",
+      "split": "dev",
+      "time_seconds": 9.25091,
+      "source_frame": 529,
+      "boxes": [
+        [
+          582,
+          347,
+          612,
+          430
+        ]
+      ],
+      "note": "Partial dark silhouette at pillar edge; soft boundary due to pan blur."
+    },
+    {
+      "id": "f019",
+      "image": "frames/f019.jpg",
+      "split": "dev",
+      "time_seconds": 9.75805,
+      "source_frame": 558,
+      "boxes": []
+    },
+    {
+      "id": "f020",
+      "image": "frames/f020.jpg",
+      "split": "dev",
+      "time_seconds": 10.2477,
+      "source_frame": 586,
+      "boxes": [
+        [
+          570,
+          364,
+          596,
+          386
+        ]
+      ],
+      "note": "Distant, partially visible blurred silhouette."
+    },
+    {
+      "id": "f021",
+      "image": "frames/f021.jpg",
+      "split": "dev",
+      "time_seconds": 10.75483,
+      "source_frame": 615,
+      "boxes": [
+        [
+          549,
+          348,
+          589,
+          413
+        ]
+      ],
+      "note": "Barrel and pillar occlude lower and right portions."
+    },
+    {
+      "id": "f022",
+      "image": "frames/f022.jpg",
+      "split": "dev",
+      "time_seconds": 11.24449,
+      "source_frame": 643,
+      "boxes": []
+    },
+    {
+      "id": "f023",
+      "image": "frames/f023.jpg",
+      "split": "dev",
+      "time_seconds": 11.75162,
+      "source_frame": 672,
+      "boxes": []
+    },
+    {
+      "id": "f024",
+      "image": "frames/f024.jpg",
+      "split": "dev",
+      "time_seconds": 12.24128,
+      "source_frame": 700,
+      "boxes": []
+    },
+    {
+      "id": "f025",
+      "image": "frames/f025.jpg",
+      "split": "dev",
+      "time_seconds": 12.74841,
+      "source_frame": 729,
+      "boxes": []
+    },
+    {
+      "id": "f026",
+      "image": "frames/f026.jpg",
+      "split": "dev",
+      "time_seconds": 13.25555,
+      "source_frame": 758,
+      "boxes": [
+        [
+          681,
+          349,
+          699,
+          384
+        ]
+      ],
+      "note": "Dark character in narrow gap only. Neighboring silhouette is behind barrel."
+    },
+    {
+      "id": "f027",
+      "image": "frames/f027.jpg",
+      "split": "dev",
+      "time_seconds": 13.7452,
+      "source_frame": 786,
+      "boxes": [
+        [
+          654,
+          363,
+          676,
+          389
+        ]
+      ]
+    },
+    {
+      "id": "f028",
+      "image": "frames/f028.jpg",
+      "split": "dev",
+      "time_seconds": 14.25234,
+      "source_frame": 815,
+      "boxes": []
+    },
+    {
+      "id": "f029",
+      "image": "frames/f029.jpg",
+      "split": "dev",
+      "time_seconds": 14.74199,
+      "source_frame": 843,
+      "boxes": [
+        [
+          658,
+          359,
+          682,
+          391
+        ]
+      ]
+    },
+    {
+      "id": "f030",
+      "image": "frames/f030.jpg",
+      "split": "dev",
+      "time_seconds": 15.24913,
+      "source_frame": 872,
+      "boxes": []
+    },
+    {
+      "id": "f031",
+      "image": "frames/f031.jpg",
+      "split": "dev",
+      "time_seconds": 15.75627,
+      "source_frame": 901,
+      "boxes": [],
+      "note": "Highlight at a barrel edge; no distinct body surface labeled."
+    },
+    {
+      "id": "f032",
+      "image": "frames/f032.jpg",
+      "split": "dev",
+      "time_seconds": 16.24592,
+      "source_frame": 929,
+      "boxes": []
+    },
+    {
+      "id": "f034",
+      "image": "frames/f034.jpg",
+      "split": "test",
+      "time_seconds": 17.24271,
+      "source_frame": 986,
+      "boxes": [
+        [
+          675,
+          360,
+          687,
+          391
+        ]
+      ],
+      "note": "Only the dark left portion on the doorway side is visible."
+    },
+    {
+      "id": "f035",
+      "image": "frames/f035.jpg",
+      "split": "test",
+      "time_seconds": 17.74985,
+      "source_frame": 1015,
+      "boxes": [
+        [
+          674,
+          354,
+          692,
+          390
+        ]
+      ],
+      "note": "Right portion seen only as x-ray through wall."
+    },
+    {
+      "id": "f036",
+      "image": "frames/f036.jpg",
+      "split": "test",
+      "time_seconds": 18.25699,
+      "source_frame": 1044,
+      "boxes": [
+        [
+          664,
+          356,
+          685,
+          382
+        ]
+      ],
+      "note": "Bottom concealed by foreground crate."
+    },
+    {
+      "id": "f037",
+      "image": "frames/f037.jpg",
+      "split": "test",
+      "time_seconds": 18.74664,
+      "source_frame": 1072,
+      "boxes": [
+        [
+          676,
+          355,
+          691,
+          392
+        ]
+      ],
+      "note": "Only the silhouette on the doorway side is visible."
+    },
+    {
+      "id": "f038",
+      "image": "frames/f038.jpg",
+      "split": "test",
+      "time_seconds": 19.25378,
+      "source_frame": 1101,
+      "boxes": [
+        [
+          655,
+          358,
+          675,
+          383
+        ]
+      ],
+      "note": "Doorway occludes part of the character; visible edges grouped into one box."
+    },
+    {
+      "id": "f039",
+      "image": "frames/f039.jpg",
+      "split": "test",
+      "time_seconds": 19.74343,
+      "source_frame": 1129,
+      "boxes": [
+        [
+          670,
+          355,
+          684,
+          392
+        ]
+      ],
+      "note": "Dark left portion visible at doorway."
+    },
+    {
+      "id": "f040",
+      "image": "frames/f040.jpg",
+      "split": "test",
+      "time_seconds": 20.25057,
+      "source_frame": 1158,
+      "boxes": [
+        [
+          597,
+          369,
+          613,
+          393
+        ]
+      ],
+      "note": "Muzzle flash tints the recognizable torso above the crate."
+    },
+    {
+      "id": "f041",
+      "image": "frames/f041.jpg",
+      "split": "test",
+      "time_seconds": 20.75771,
+      "source_frame": 1187,
+      "boxes": []
+    },
+    {
+      "id": "f042",
+      "image": "frames/f042.jpg",
+      "split": "test",
+      "time_seconds": 21.24736,
+      "source_frame": 1215,
+      "boxes": [
+        [
+          658,
+          357,
+          681,
+          396
+        ]
+      ],
+      "note": "Right portion extends behind the nearer wall and is excluded."
+    },
+    {
+      "id": "f043",
+      "image": "frames/f043.jpg",
+      "split": "test",
+      "time_seconds": 21.7545,
+      "source_frame": 1244,
+      "boxes": []
+    },
+    {
+      "id": "f044",
+      "image": "frames/f044.jpg",
+      "split": "test",
+      "time_seconds": 22.24415,
+      "source_frame": 1272,
+      "boxes": []
+    },
+    {
+      "id": "f045",
+      "image": "frames/f045.jpg",
+      "split": "test",
+      "time_seconds": 22.75129,
+      "source_frame": 1301,
+      "boxes": [],
+      "note": "Silhouette overlays barrel and crate; no separable visible body labeled."
+    },
+    {
+      "id": "f046",
+      "image": "frames/f046.jpg",
+      "split": "test",
+      "time_seconds": 23.25842,
+      "source_frame": 1330,
+      "boxes": [],
+      "note": "Silhouette spans a vertical crate edge and barrel; a tiny possible exposed sliver is ambiguous and omitted."
+    },
+    {
+      "id": "f047",
+      "image": "frames/f047.jpg",
+      "split": "test",
+      "time_seconds": 23.74807,
+      "source_frame": 1358,
+      "boxes": [
+        [
+          622,
+          353,
+          640,
+          373
+        ]
+      ],
+      "note": "Head and upper torso visible above the barrels. Lower x-ray outline excluded."
+    },
+    {
+      "id": "f048",
+      "image": "frames/f048.jpg",
+      "split": "test",
+      "time_seconds": 24.25521,
+      "source_frame": 1387,
+      "boxes": []
+    },
+    {
+      "id": "f049",
+      "image": "frames/f049.jpg",
+      "split": "test",
+      "time_seconds": 24.74486,
+      "source_frame": 1415,
+      "boxes": []
+    },
+    {
+      "id": "f050",
+      "image": "frames/f050.jpg",
+      "split": "test",
+      "time_seconds": 25.252,
+      "source_frame": 1444,
+      "boxes": []
+    },
+    {
+      "id": "f051",
+      "image": "frames/f051.jpg",
+      "split": "test",
+      "time_seconds": 25.74165,
+      "source_frame": 1472,
+      "boxes": []
+    },
+    {
+      "id": "f052",
+      "image": "frames/f052.jpg",
+      "split": "test",
+      "time_seconds": 26.24879,
+      "source_frame": 1501,
+      "boxes": []
+    },
+    {
+      "id": "f053",
+      "image": "frames/f053.jpg",
+      "split": "test",
+      "time_seconds": 26.75593,
+      "source_frame": 1530,
+      "boxes": []
+    },
+    {
+      "id": "f054",
+      "image": "frames/f054.jpg",
+      "split": "test",
+      "time_seconds": 27.24558,
+      "source_frame": 1558,
+      "boxes": []
+    }
+  ]
+}

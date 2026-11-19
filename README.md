@@ -46,3 +46,47 @@ The original `FPSight_demo/fpsight_demo.py` is a command-line script using pretr
 | Review | Annotated video and CSV | Local web replay, event seeking, synchronized distance curves, and baseline overlays |
 | Experiment outputs | Frame-level CSV | Frame/event CSV, analysis JSON, saved configuration, and baseline/iteration comparison |
 | Structure | Single script | Separate analyzer, CLI, local server, interface, and rule tests |
+
+## Midterm detector iterations
+
+[Detection benchmark](data/eval/README.md) contains the 51-frame pilot, three new inference iterations, their saved predictions, and the commands to reproduce the recall, precision, AP50 and CPU latency comparisons.
+
+[Follow-up benchmark](data/eval_followup/README.md) adds a cumulative three-iteration sequence with locked Recall, F1, and AP50 evaluation on separate recordings.
+
+
+## Live detector versions
+
+Run `./start.command` on macOS, then open http://127.0.0.1:5810.
+The sidebar **Demo mode** selector loads the same 24-second clip analyzed
+with Standard, High resolution, Small targets or Multi-view settings, including tracking, events, distance curves and exports.
+The bundled iteration demos are in `data/demos/`. Switching versions keeps
+the replay timestamp. I1 is the default.
+
+For your own video, choose **Import Video → Analysis mode**. Selecting I2,
+I3 or I4 fills its full-precision development threshold automatically.
+The score threshold can also be edited before analysis.
+
+| Version | Video detector | Preset score threshold |
+| --- | --- | ---: |
+| Standard (I1) | Original gameplay ROI and geometry filters, size 1280 | 0.12 |
+| High resolution (I2) | Same ROI and filters, size 2240 | 0.22722969949245453 |
+| Small targets (I3) | I2 plus small-box rescoring | 0.22722969949245453 |
+| Multi-view (I4) | I3 plus overlapping-tile agreement | 0.29818594455718994 |
+
+The new modes reuse `predict_progression.run_frame`, then apply the selected
+threshold and feed its boxes into the existing tracker and aim measurements.
+I3/I4 scores are adjusted rankings. The independent-recording benchmark found
+more false positives, so compare overlays and events on your recording.
+
+CLI example:
+
+```sh
+.venv/bin/python -m fpsight.cli data/source.mp4 --detector i4 --output runs/i4-review
+```
+
+Use `--detector i2`, `i3` or `proposal` to run other versions, or `--conf`
+to override the preset threshold. I2–I4 use the gameplay ROI and size 2240.
+Their saved analysis records the selected version, effective threshold, input
+size and detector latency. The full-frame overlay uses confidence 0.12 and size
+1280 as the reference for new-mode runs. The Parameters & Results page reports the
+selected version's measured output counts and aim proxies.
